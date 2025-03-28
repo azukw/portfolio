@@ -199,13 +199,13 @@
   }
 
   .hero-img {
-    top: 32%;
+    top: 35%;
     width: 35vh;
     height: 35vh;
   }
 
   .skills {
-    top: 57%;
+    top: 57% !important;
     width: 80%;
   }
 
@@ -215,7 +215,7 @@
   }
   
   .hero-copy {
-    top: 79%;
+    top: 85%;
   }
 
   .hero-copy-wrapper h1 {

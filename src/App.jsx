@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Menu from "./components/Menu/Menu";
 import ReturnToTop from "./components/ReturnToTop/ReturnToTop";
@@ -49,6 +50,16 @@ function ScrollToTop() {
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectPath = urlParams.get("redirect");
+    if (redirectPath) {
+        navigate(redirectPath, { replace: true });
+    }
+}, [navigate]);
 
   return (
     <>

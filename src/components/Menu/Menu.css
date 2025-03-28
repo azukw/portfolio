@@ -137,7 +137,7 @@
 
 .menu-link-item .menu-link-item-holder a {
   position: relative;
-  color: var(--fg);
+  color: white;
   font-family: "Rader";
   font-size: 10vw;
   text-transform: uppercase;
@@ -146,15 +146,16 @@
   transition: color 0.3s;
 }
 
-.menu-link-item .menu-link-item-holder:hover a {
-  color: rgba(255, 255, 255, 1);
-}
 
 @media (max-width: 1000px) {
   .menu {
     width: calc(100% - 2.5em);
     height: calc(100svh - 2.5em);
     margin: 1.25em;
+  }
+
+  .menu-logo a h4{
+    font-size: 8vw;
   }
 
   .menu-bar {
