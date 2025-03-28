@@ -1,3 +1,4 @@
+
 .overlay {
     position: fixed;
     width: 100vw;
@@ -12,27 +13,9 @@
     background: #1a1a1a;
 }
 
-.counter {
-    opacity: 0.3;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50vw;
-    font-family: "Rader";
-    z-index: 10000;
-    color: #070707;
-    letter-spacing: .1em;
-    background-color: #1a1a1a;
-    top: -1vh;
-    text-shadow: 
-      -1px -1px 1px #111, 
-      2px 2px 1px #363636;
-    }
 
 .decrypted-text-container {
+    width: 100vw;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -80,3 +63,56 @@
         padding-left: 5vw;
     }
 }
+
+/* .pacman-scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .scene {
+    position: relative;
+    width: 100%;
+    height: var(--pacman-size);
+  }
+  
+  .pac-man {
+    margin-left: -15%;
+    position: absolute;
+    width: var(--pacman-size);
+    height: var(--pacman-size);
+    background: var(--primary-color);
+    border-radius: 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 50% 50%, 100% 70%, 100% 100%, 0% 100%);
+    animation: move var(--animation-duration) linear, eating var(--mouth-speed) infinite;
+    z-index: 1;
+  }
+
+  .rect {
+    margin-left: -210%;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: #1a1a1a;
+    animation: move var(--animation-duration) linear;
+    z-index: 10003;
+  }
+ 
+  @keyframes move {
+    0% { left: 0; }
+    100% { left: 120%; }
+  }
+  
+  @keyframes eating {
+    0% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 100% 00%, 100% 100%, 0% 100%); }
+    50% { clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 50% 50%, 100% 90%, 100% 100%, 0% 100%); }
+    100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 100% 00%, 100% 100%, 0% 100%); }
+  }
+   */

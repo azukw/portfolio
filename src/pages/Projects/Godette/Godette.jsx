@@ -155,7 +155,7 @@ const Godette = () => {
 
 
           <div className="section-full-video">
-            <video src={Preview} autoPlay muted></video>
+            <video src={Preview} autoPlay muted loop></video>
           </div>
 
           <div className="section-half">
@@ -171,19 +171,19 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Attack} autoPlay muted></video>
+              <video src={Attack} autoPlay muted loop></video>
             </div>
             <div className="section-media">
-              <video src={Jump} autoPlay muted></video>
+              <video src={Jump} autoPlay muted loop></video>
             </div>
           </div>
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Run} autoPlay muted></video>
+              <video src={Run} autoPlay muted loop></video>
             </div>
             <div className="section-media">
-              <video src={Swap} autoPlay muted></video>
+              <video src={Swap} autoPlay muted loop></video>
             </div>
           </div>
 
@@ -201,10 +201,10 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={FightWarrior} autoPlay muted></video>
+              <video src={FightWarrior} autoPlay muted loop></video>
             </div>
             <div className="section-media">
-              <video src={FightMage} autoPlay muted></video>
+              <video src={FightMage} autoPlay muted loop></video>
             </div>
           </div>
 
@@ -220,10 +220,10 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Castle} autoPlay muted></video>
+              <video src={Castle} autoPlay muted loop></video>
             </div>
             <div className="section-media">
-              <video src={FightBoss} autoPlay muted></video>
+              <video src={FightBoss} autoPlay muted loop></video>
             </div>
           </div>
 

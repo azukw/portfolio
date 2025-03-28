@@ -209,8 +209,9 @@
     width: 80%;
   }
 
-  .skills p {
-    font-size: 13px;
+  .skills span {
+    font-weight: bold;
+    font-size: 2.5vw;
   }
   
   .hero-copy {

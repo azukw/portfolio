@@ -44,14 +44,14 @@ const BlockRevealPreloader = () => {
         tl.to(".decrypted-text-container", {
             opacity: 0,
             duration: 0.25,
-            delay: -0.25
+            delay: -2
         });
 
         // Bar height reduction
         tl.to(".bar", {
             height: 0,
             duration: 1.5,
-            delay: -1,
+            delay: -2,
             stagger: {
                 amount: 0.5
             },
@@ -66,11 +66,10 @@ const BlockRevealPreloader = () => {
 
     return (
         <>
-            <h1 className="counter">{counter}</h1>
             <div className="decrypted-text-container">
                 <h4>
                 <DecryptedText
-                    speed={200}
+                    speed={100}
                     className='preload-sami'
                     text="sami saoud"
                     sequential={true}

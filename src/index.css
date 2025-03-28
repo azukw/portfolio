@@ -7,6 +7,13 @@
   --fg200: #ffffff;
 }
 
+.light-mode {
+  --bg: #ffffff;
+  --bg200: rgba(59, 59, 57, 0.281);
+  --fg: #000000;
+  --fg200: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -4,8 +4,8 @@
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 100;
   pointer-events: none;
+  z-index: 10;
 }
 
 .menu-bar {
@@ -23,7 +23,7 @@
   overflow: hidden;
   border: 1px dashed rgba(255, 255, 255, 0.25);
   pointer-events: all;
-  z-index: 100000;
+  z-index: 10000;
 }
 
 .menu-bar-container {
@@ -37,10 +37,10 @@
 }
 
 .menu-logo h4 {
-  font-size: 2.3vw;
+  font-size: 2.2vw;
   position: relative;
   display: inline-block;
-  color: var(--fg);
+  color: white;
 }
 
 .menu-actions {

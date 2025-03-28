@@ -112,7 +112,7 @@ const GenieLog = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Carte} autoPlay muted></video>
+            <video src={Carte} autoPlay muted loop></video>
           </div>
 
 

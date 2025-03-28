@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import Menu from "./components/Menu/Menu";
 import ReturnToTop from "./components/ReturnToTop/ReturnToTop";
-import BlockRevealPreloader from "./components/BlockRevealPreloader/BlockRevealPreloader";
+import Preloader from "./components/BlockRevealPreloader/BlockRevealPreloader";
 
 import Home from "./pages/Home/Home";
 import Work from "./pages/Work/Work";
@@ -40,7 +40,7 @@ function ScrollToTop() {
   }, [location.pathname]);
 
   if (isLoading) {
-    return <BlockRevealPreloader />;
+    return <Preloader />;
   }
 
   return null;
@@ -54,7 +54,7 @@ function App() {
     <>
       <ScrollToTop />
       <Menu />
-      <ReturnToTop /> {/* Add this line */}
+      <ReturnToTop />
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />

@@ -103,7 +103,7 @@ const Seeds = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Preview} autoPlay muted></video>
+            <video src={Preview} autoPlay muted loop></video>
           </div>
         </div>
 

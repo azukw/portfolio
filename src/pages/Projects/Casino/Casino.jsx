@@ -90,7 +90,7 @@ const Casino = () => {
 
 
           <div className="section-full-video">
-            <video src={Aim} autoPlay muted></video>
+            <video src={Aim} autoPlay muted loop></video>
           </div>
 
           <div className="section-half">
@@ -102,7 +102,7 @@ const Casino = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Bingo} autoPlay muted></video>
+            <video src={Bingo} autoPlay muted loop></video>
           </div>
 
           <div className="section-half">
@@ -115,7 +115,7 @@ const Casino = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Crash} autoPlay muted></video>
+            <video src={Crash} autoPlay muted loop></video>
           </div>
 
 

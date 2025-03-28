@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Menu.css";
 
+import ThemeToggle from "../theme/ThemeToggle";
+
 import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
@@ -183,10 +185,11 @@ const Menu = () => {
         <div className="menu-bar-container">
           <div className="menu-logo" onClick={closeMenu}>
             <Link to="/">
-              <h4>Sami Saoud</h4>
+              <h4>Sami</h4>
             </Link>
           </div>
           <div className="menu-actions">
+            <ThemeToggle/>
             <div className="menu-toggle">
               <button className="hamburger-icon" onClick={toggleMenu}></button>
             </div>

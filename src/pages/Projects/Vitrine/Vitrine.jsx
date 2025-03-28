@@ -105,7 +105,7 @@ const Vitrine = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Video} autoPlay muted></video>
+            <video src={Video} autoPlay muted loop></video>
           </div>
 
 

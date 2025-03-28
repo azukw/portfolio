@@ -93,7 +93,7 @@ const Portfolio = () => {
 
 
           <div className="section-full-video">
-            <video src={Video1} autoPlay muted></video>
+            <video src={Video1} autoPlay muted loop></video>
           </div>
 
           <div className="section-half">
@@ -104,7 +104,7 @@ const Portfolio = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Video2} autoPlay muted></video>
+            <video src={Video2} autoPlay muted loop></video>
           </div>
 
 
