@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ContactForm.css";
 
 const ContactForm = () => {
-  const [messageSent, setMessageSent] = useState(false);
+  const [messageSent, setMessageSent] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event) => {

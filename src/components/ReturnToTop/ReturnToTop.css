@@ -12,14 +12,15 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    color: black;
+    color: var(--fg);
+    mix-blend-mode: difference;
     
     /* Shadow and transition */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     
     /* Remove default button styling */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
     cursor: pointer;
     
     /* Centering the icon */
