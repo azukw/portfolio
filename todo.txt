@@ -1,4 +1,2 @@
-- 404
-- preloader
+
 - mode clair
-- logo dans transition
