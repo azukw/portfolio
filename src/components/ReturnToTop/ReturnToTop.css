@@ -1,0 +1,65 @@
+.return-to-top-btn {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    
+    /* Button styling */
+    opacity: 0.8;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: black;
+    
+    /* Shadow and transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    /* Remove default button styling */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    
+    /* Centering the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Fade in animation */
+    animation: fadeIn 0.3s ease-out;
+}
+
+.return-to-top-btn.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+.return-to-top-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateX(-50%) scale(1.05);
+}

@@ -1,0 +1,82 @@
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+}
+
+.bar {
+    width: 10vw;
+    height: 105vh;
+    background: #1a1a1a;
+}
+
+.counter {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50vw;
+    font-family: "Rader";
+    z-index: 10000;
+    color: #070707;
+    letter-spacing: .1em;
+    background-color: #1a1a1a;
+    top: -1vh;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+    }
+
+.decrypted-text-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decrypted-text-container h4 {
+    font-size: 10vw;
+    color: #bcbcc4;
+    letter-spacing: .1em;
+    text-align: center;
+    text-shadow:
+        0 -1px 0 #fff,
+        0 1px 0 #2e2e2e,
+        0 2px 0 #2c2c2c,
+        0 3px 0 #2a2a2a,
+        0 4px 0 #282828,
+        0 5px 0 #262626,
+        0 6px 0 #242424,
+        0 7px 0 #222,
+        0 8px 0 #202020,
+        0 9px 0 #1e1e1e,
+        0 10px 0 #1c1c1c,
+        0 11px 0 #1a1a1a,
+        0 12px 0 #181818,
+        0 13px 0 #161616,
+        0 14px 0 #141414,
+        0 15px 0 #121212,
+        0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1000px) {
+    .decrypted-text-container h4 {
+        font-size: 20vw;
+        line-height: 13vw;
+        width: 100%;
+    }
+
+    .counter {
+        font-size: 70vw;
+        padding-left: 5vw;
+    }
+}

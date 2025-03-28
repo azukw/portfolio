@@ -1,8 +1,10 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Menu from "./components/Menu/Menu";
+import ReturnToTop from "./components/ReturnToTop/ReturnToTop";
+import BlockRevealPreloader from "./components/BlockRevealPreloader/BlockRevealPreloader";
 
 import Home from "./pages/Home/Home";
 import Work from "./pages/Work/Work";
@@ -17,20 +19,33 @@ import Casino from "./pages/Projects/Casino/Casino";
 import About from "./pages/About/About";
 import Error from "./pages/Error/Error";
 
-
 import { AnimatePresence } from "framer-motion";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 1400);
-  }, [pathname]);
+  }, [location.pathname]);
+
+  if (isLoading) {
+    return <BlockRevealPreloader />;
+  }
 
   return null;
 }
+
 
 function App() {
   const location = useLocation();
@@ -39,6 +54,7 @@ function App() {
     <>
       <ScrollToTop />
       <Menu />
+      <ReturnToTop /> {/* Add this line */}
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -48,12 +64,12 @@ function App() {
           <Route path="/works/seeds" element={<Seeds />} />
           <Route path="/works/portfolio" element={<Portfolio />} />
           <Route path="/works/vitrine" element={<Vitrine />} />
-          <Route path="/works/genie" element={<GenieLog />} />
+          <Route path="/works/ctrlaltelite" element={<GenieLog />} />
           <Route path="/works/casino" element={<Casino />} />
           <Route
-                    path="*"
-                    element={<Error />}
-                />
+            path="*"
+            element={<Error />}
+          />
         </Routes>
       </AnimatePresence>
     </>

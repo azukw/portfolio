@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
 
 import AnimatedCopy from "../../components/AnimatedCopy/AnimatedCopy";
@@ -78,22 +79,29 @@ const About = () => {
             </div>
             <div className="fav-tools-list-row">
               <div className="fav-tool">
-                <div className="fav-tool-img">
-                  <img src="/about/cv.jpg" alt="" />
-                </div>
-                <h4>Mon CV</h4>
+                <a href="/about/cv_sami-saoud.pdf" target="_blank" rel="noopener noreferrer">
+                  <div className="fav-tool-img">
+                    <img src="/about/cv.jpg" alt="" />
+                  </div>
+                  <h4>Mon CV</h4>
+                </a>
+              </div>
+
+              <div className="fav-tool">
+                <a href="https://github.com/azukw/" target="_blank">
+                  <div className="fav-tool-img">
+                    <img src="/about/gh.jpg" alt="" />
+                  </div>
+                  <h4>GitHub</h4>
+                </a>
               </div>
               <div className="fav-tool">
-                <div className="fav-tool-img">
-                  <img src="/about/gh.jpg" alt="" />
-                </div>
-                <h4>GitHub</h4>
-              </div>
-              <div className="fav-tool">
-                <div className="fav-tool-img">
-                  <img src="/about/li.jpg" alt="" />
-                </div>
-                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/sami-saoud-446836340/" target="_blank">
+                  <div className="fav-tool-img">
+                    <img src="/about/li.jpg" alt="" />
+                  </div>
+                  <h4>LinkedIn</h4>
+                </a>
               </div>
             </div>
           </div>
