@@ -1,7 +1,7 @@
 .sticky-titles {
   position: relative;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   padding: 2em;
   display: flex;
@@ -55,7 +55,7 @@
 
 .home-work {
   width: 100%;
-  margin-top: -95vh;
+  margin-top: -95dvh;
 }
 
 .home-work-list {
@@ -95,44 +95,6 @@
 }
 
 @media (max-width: 1000px) {
-
-  .hero-text-left, .hero-text-right {
-    display: none;
-  }
-
-  .hero-img {
-    top: 32%;
-    width: 35vh;
-    height: 35vh;
-  }
-
-  .skills {
-    top: 57%;
-    width: 80%;
-  }
-
-  .skills p {
-    font-size: 13px;
-  }
-  
-  .hero-copy {
-    top: 79%;
-  }
-
-  .hero-copy-wrapper h1 {
-    width: 100%;
-    line-height: 10vh;
-    font-size: 18vh;
-  }
-  
-  .hero-tagline {
-    top: 62%;
-    width: 80%;
-  }
-
-  .hero-tagline p {
-    font-size: 15px;
-  }
   
   .hero,
   .sticky-titles,

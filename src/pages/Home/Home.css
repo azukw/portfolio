@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -107,7 +107,7 @@
 .sticky-titles {
   position: relative;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   padding: 2em;
   display: flex;
@@ -144,7 +144,7 @@
 .sticky-work-header {
   position: relative;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   padding: 2em;
   display: flex;
   justify-content: center;
@@ -200,8 +200,8 @@
 
   .hero-img {
     top: 35%;
-    width: 35vh;
-    height: 35vh;
+    width: 35dvh;
+    height: 35dvh;
   }
 
   .skills {
@@ -215,13 +215,13 @@
   }
   
   .hero-copy {
-    top: 85%;
+    top: 82%;
   }
 
   .hero-copy-wrapper h1 {
     width: 100%;
-    line-height: 10vh;
-    font-size: 18vh;
+    line-height: 10dvh;
+    font-size: 18dvh;
   }
   
   .hero-tagline {

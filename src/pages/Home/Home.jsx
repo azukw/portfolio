@@ -344,7 +344,7 @@ const Home = () => {
               />
           </h2>
         </section>
-        
+        <ContactForm/>
         <Footer />
       </div>
     </ReactLenis>

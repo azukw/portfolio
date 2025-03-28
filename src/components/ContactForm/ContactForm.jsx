@@ -3,13 +3,13 @@ import "./ContactForm.css";
 
 const ContactForm = () => {
   return (
-    <div className="contact-form">
+    <form className="contact-form " action="https://formsubmit.co/sami.ssaoud@gmail.com" method="POST">
       <div className="contact-form-row">
         <div className="contact-form-row-copy-item">
           <p className="primary sm">Envoyez-moi un message</p>
         </div>
         <div className="contact-form-row-copy-item">
-          <p className="primary sm">(Scene — 07)</p>
+          <p className="primary sm">(Sami — Saoud)</p>
         </div>
         <div className="contact-form-row-copy-item">
           <p className="primary sm">&copy; 2025</p>
@@ -22,28 +22,28 @@ const ContactForm = () => {
             <h3>CONTACTEZ-MOI</h3>
 
             <p>
-              Have a story in mind? Let’s bring it to life. I’d love to hear
-              what you’re working on and explore how we can collaborate.
+            Vous avez une idée en tête ? Donnons-lui vie ! Pour un projet ou autre, contactez-moi.
             </p>
           </div>
 
           <div className="contact-form-availability">
-            <p className="primary sm">Sami Saoud</p>
-            <p className="primary sm">Contact</p>
+          <p className="primary sm">Formulaire</p>
+          <p className="primary sm">de</p>
+          <p className="primary sm">Contact</p>
           </div>
         </div>
 
         <div className="contact-form-col">
           <div className="form-item">
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Nom" required />
           </div>
 
           <div className="form-item">
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Email" required />
           </div>
 
           <div className="form-item">
-            <textarea type="text" rows={6} placeholder="Message" />
+            <textarea type="text" rows={6} placeholder="Message" required />
           </div>
 
           <div className="form-item">
@@ -51,7 +51,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

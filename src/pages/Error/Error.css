@@ -1,7 +1,7 @@
 .header404-container {
   position: absolute;
   width: 100%;
-  height: 80vh;
+  height: 80dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,11 +51,11 @@
 @media (orientation: portrait) {
 
   .header404>span {
-    font-size: 50vh;
+    font-size: 50dvh;
   }
 
   .footer404 span {
-    top: -15vh;
+    top: -15dvh;
     font-size: 5vw;
   }
 }

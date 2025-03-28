@@ -15,7 +15,7 @@ const Error = () => {
             
             gsap.fromTo(headerSpans, 
                 {
-                    top: "-100vh",
+                    top: "-100dvh",
                     opacity: 0
                 }, 
                 {

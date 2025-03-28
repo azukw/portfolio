@@ -113,7 +113,7 @@
 
 .about-banner-img {
   margin: 2em;
-  height: 50svh;
+  height: 50dvh;
   border-radius: 1em;
   overflow: hidden;
   border: 1px dashed var(--fg);

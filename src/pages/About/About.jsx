@@ -106,7 +106,7 @@ const About = () => {
             </div>
           </div>
         </section>
-
+        <ContactForm/>
         <Footer />
       </div>
     </ReactLenis>
