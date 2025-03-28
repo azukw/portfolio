@@ -15,14 +15,14 @@ const workList = [
   },
   {
     id: 3,
-    nom: "vitrine",
+    nom: "portfolio",
     title: "Portfolio",
     category: "HTML, CSS, JavaScript",
     image: "/work/work-3.jpg",
   },
   {
     id: 4,
-    nom: "portfolio",
+    nom: "vitrine",
     title: "Vitrine Boutique",
     category: "HTML, CSS, JavaScript, Python",
     image: "/work/work-4.jpg",

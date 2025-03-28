@@ -33,25 +33,18 @@ const BlockRevealPreloader = () => {
         // GSAP Animations
         const tl = gsap.timeline();
 
-        // Counter fade out
-        tl.to(".counter", {
-            opacity: 0,
-            duration: 0.25,
-            delay: 3.5
-        });
-
         // Decrypted text fade out
         tl.to(".decrypted-text-container", {
             opacity: 0,
             duration: 0.25,
-            delay: -2
+            delay: 2
         });
 
         // Bar height reduction
         tl.to(".bar", {
             height: 0,
             duration: 1.5,
-            delay: -2,
+            delay: -1,
             stagger: {
                 amount: 0.5
             },

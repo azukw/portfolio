@@ -135,9 +135,7 @@ button {
 input,
 textarea,
 input:active,
-input:focus,
-textarea:active,
-textarea:focus {
+textarea:active{
   border: none;
   outline: none;
   width: 100%;
@@ -148,6 +146,13 @@ textarea:focus {
   -webkit-font-smoothing: antialiased;
   border-radius: 0.5rem;
 }
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #000000; /* Choisis une couleur qui te plaît */
+  border: none;
+}
+
 
 input::placeholder,
 textarea::placeholder {
