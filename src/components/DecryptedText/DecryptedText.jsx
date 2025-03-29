@@ -52,7 +52,7 @@ export default function DecryptedText({
   const [isHovering, setIsHovering] = useState(false)
   const [isScrambling, setIsScrambling] = useState(false)
   const [revealedIndices, setRevealedIndices] = useState(new Set())
-  const [hasAnimated, setHasAnimated] = useState(false) // for "view" mode
+  const [hasAnimated, setHasAnimated] = useState(false) 
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -184,8 +184,8 @@ export default function DecryptedText({
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasAnimated) {
-          setIsHovering(true) // trigger the decrypteion
-          setHasAnimated(true) // ensure it runs only once
+          setIsHovering(true)
+          setHasAnimated(true) 
         }
       })
     }

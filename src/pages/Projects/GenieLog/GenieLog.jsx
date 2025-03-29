@@ -4,7 +4,7 @@ import "../projects.css";
 
 
 import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
-import AnimatedCopy from "../../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
 
@@ -19,16 +19,16 @@ const GenieLog = () => {
     <ReactLenis root>
       <div className="page project">
         <section className="project-header">
-          <AnimatedCopy
+          <TexteAnime
             delay={1}
             animateOnScroll={false}
             className="primary sm"
           >
             Java, Swing, API REST, HTML, CSS, JS
-          </AnimatedCopy>
-          <AnimatedCopy tag="h2" delay={1}>
+          </TexteAnime>
+          <TexteAnime tag="h2" delay={1}>
             Projet Génie Logiciel
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section className="project-banner-img">
@@ -39,43 +39,43 @@ const GenieLog = () => {
 
         <section className="project-details">
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Projet
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             Le projet était de créer une application, avec une API ainsi qu'une base de données. Cette application cherche et compare les prix, 
             caractéristiques et + des stations essence en France.
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Année
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               2024
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Type
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Application
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Détails
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Projet universitaire, en groupe
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
         </section>
 
@@ -119,12 +119,12 @@ const GenieLog = () => {
         </div>
 
         <section className="next-project">
-          <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+          <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
             06 - 06
-          </AnimatedCopy>
-          <AnimatedCopy tag="h3" animateOnScroll={true}>
+          </TexteAnime>
+          <TexteAnime tag="h3" animateOnScroll={true}>
             PROJET SUIVANT
-          </AnimatedCopy>
+          </TexteAnime>
 
           <div className="next-project-img">
             <Link to={`/works/casino`}>
@@ -134,9 +134,9 @@ const GenieLog = () => {
             </Link>
           </div>
 
-          <AnimatedCopy tag="h4" animateOnScroll={true}>
+          <TexteAnime tag="h4" animateOnScroll={true}>
             Anti-Casino
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
       </div>

@@ -36,17 +36,6 @@
   font-size: 3vw;
 }
 
-.footer404-wrapper:after {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 110%;
-  height: 100%;
-  background: #fff;
-  margin: 0 auto;
-  transition: 1s;
-}
 
 @media (orientation: portrait) {
 

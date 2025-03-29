@@ -10,7 +10,6 @@
   z-index: 9999;
 }
 
-/* Prevent scrolling when preloader is active */
 body.preloader-active {
   overflow: hidden;
   position: fixed;

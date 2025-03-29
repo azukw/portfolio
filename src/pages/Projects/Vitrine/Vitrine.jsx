@@ -4,7 +4,7 @@ import "../projects.css";
 
 
 import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
-import AnimatedCopy from "../../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
 
@@ -17,16 +17,16 @@ const Vitrine = () => {
     <ReactLenis root>
       <div className="page project">
         <section className="project-header">
-          <AnimatedCopy
+          <TexteAnime
             delay={1}
             animateOnScroll={false}
             className="primary sm"
           >
             HTML, CSS, Javascript, Python (Flask)
-          </AnimatedCopy>
-          <AnimatedCopy tag="h2" delay={1}>
+          </TexteAnime>
+          <TexteAnime tag="h2" delay={1}>
             Portfolio
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section className="project-banner-img">
@@ -37,45 +37,45 @@ const Vitrine = () => {
 
         <section className="project-details">
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Vitrine Boutique
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             Un site web de boutique que j'ai créé afin d'apprendre à créer des serveurs web 
             avec Python et Flask. Ce site m'a permis de découvrir les serveurs en Python, ainsi que 
             tout le processus de mémorisation des données utilisateurs, avec les cookies 
             par exemple.
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Année
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               2024
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Type
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Site Web
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Détails
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Projet universitaire, en groupe
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
         </section>
 
@@ -112,12 +112,12 @@ const Vitrine = () => {
         </div>
 
         <section className="next-project">
-          <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+          <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
             05 - 06
-          </AnimatedCopy>
-          <AnimatedCopy tag="h3" animateOnScroll={true}>
+          </TexteAnime>
+          <TexteAnime tag="h3" animateOnScroll={true}>
             PROJET SUIVANT
-          </AnimatedCopy>
+          </TexteAnime>
 
           <div className="next-project-img">
             <Link to={`/works/genielog`}>
@@ -127,9 +127,9 @@ const Vitrine = () => {
             </Link>
           </div>
 
-          <AnimatedCopy tag="h4" animateOnScroll={true}>
+          <TexteAnime tag="h4" animateOnScroll={true}>
             Génie Logiciel
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
       </div>

@@ -6,9 +6,7 @@ const ReturnToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
-  // Function to handle scroll event
   const toggleVisibility = () => {
-    // Show button when page is scrolled down more than 300px
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
@@ -16,7 +14,6 @@ const ReturnToTop = () => {
     }
   };
 
-  // Function to scroll to top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -24,24 +21,21 @@ const ReturnToTop = () => {
     });
   };
 
-  // Add scroll event listener when component mounts
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     
-    // Cleanup event listener when component unmounts
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
 
-  // Handle rendering with fade out
   useEffect(() => {
     if (isVisible) {
       setShouldRender(true);
     } else {
       const timer = setTimeout(() => {
         setShouldRender(false);
-      }, 300); // Match the fade-out animation duration
+      }, 300);
       return () => clearTimeout(timer);
     }
   }, [isVisible]);

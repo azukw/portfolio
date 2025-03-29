@@ -4,7 +4,7 @@ import "../projects.css";
 
 
 import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
-import AnimatedCopy from "../../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
 
@@ -20,16 +20,16 @@ const Seeds = () => {
     <ReactLenis root>
       <div className="page project">
         <section className="project-header">
-          <AnimatedCopy
+          <TexteAnime
             delay={1}
             animateOnScroll={false}
             className="primary sm"
           >
             Maya, Unreal Engine, Substance, Mixamo, C#
-          </AnimatedCopy>
-          <AnimatedCopy tag="h2" delay={1}>
+          </TexteAnime>
+          <TexteAnime tag="h2" delay={1}>
             Creative Seeds
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section className="project-banner-img">
@@ -40,45 +40,45 @@ const Seeds = () => {
 
         <section className="project-details">
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Projet
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             Projet de modélisation 3D créé au sein de l'école Creative Seeds, à l'occasion 
             d'une spécialité en L2. Le but était d'habiller le personnage en modélisant le 
             tout de A à Z. J'ai créé un personnage original : un gentleman, avec une veste 
             longue, un chapeau, ainsi qu'une moustache.
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Année
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               2024
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Type
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Modélisation 3D, Animation, Programmation
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Détails
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Projet universitaire, solo
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
         </section>
 
@@ -108,12 +108,12 @@ const Seeds = () => {
         </div>
 
         <section className="next-project">
-          <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+          <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
             03 - 06
-          </AnimatedCopy>
-          <AnimatedCopy tag="h3" animateOnScroll={true}>
+          </TexteAnime>
+          <TexteAnime tag="h3" animateOnScroll={true}>
             PROJET SUIVANT
-          </AnimatedCopy>
+          </TexteAnime>
 
           <div className="next-project-img">
             <Link to={`/works/portfolio`}>
@@ -123,9 +123,9 @@ const Seeds = () => {
             </Link>
           </div>
 
-          <AnimatedCopy tag="h4" animateOnScroll={true}>
+          <TexteAnime tag="h4" animateOnScroll={true}>
             Portfolio
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
       </div>

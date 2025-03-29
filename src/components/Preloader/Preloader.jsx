@@ -7,7 +7,6 @@ const Preloader = ({ onComplete }) => {
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
-    // Block scrolling when the preloader starts
     document.body.style.overflow = 'hidden';
     document.body.style.height = '100%';
     document.body.style.position = 'fixed';
@@ -19,29 +18,24 @@ const Preloader = ({ onComplete }) => {
       onComplete: () => {
         const event = new CustomEvent('preloaderComplete');
         window.dispatchEvent(event);
-        // Set a state to track when animation completes
         setIsAnimating(false);
         
-        // Re-enable scrolling when animation completes
         document.body.style.overflow = '';
         document.body.style.height = '';
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
         
-        // Call the onComplete prop to notify parent component
         if (onComplete) onComplete();
       }
     });
     
-    // Animate columns up
     tl.to(".pl_col", {
       top: "0",
       duration: 2,
       ease: "power4.inOut"
     });
     
-    // Animate items in each column with different stagger patterns
     tl.to(".pl_c-1 .pl_item", {
       top: "0",
       stagger: 0.25,
@@ -77,25 +71,21 @@ const Preloader = ({ onComplete }) => {
       ease: "power4.inOut"
     }, "-=3");
     
-    // Scale up container
     tl.to(".preloader-container", {
       scale: 6,
       duration: 3,
       ease: "power4.inOut"
     }, "-=2");
     
-    // Fade out the preloader after scaling animation is partially complete
     tl.to(".preloader-wrapper", {
       opacity: 0,
       duration: 1,
       ease: "power2.inOut",
       pointerEvents: "none"
-    }, "-=1.5"); // This starts 1.5 seconds before the timeline completes
+    }, "-=1.5");  
     
-    // Return cleanup function to kill animation if component unmounts
     return () => {
       tl.kill();
-      // Make sure to re-enable scrolling if the component unmounts
       document.body.style.overflow = '';
       document.body.style.height = '';
     };

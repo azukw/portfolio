@@ -4,7 +4,7 @@ import "../projects.css";
 
 
 import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
-import AnimatedCopy from "../../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
 
@@ -31,16 +31,16 @@ const Godette = () => {
     <ReactLenis root>
       <div className="page project">
         <section className="project-header">
-          <AnimatedCopy
+          <TexteAnime
             delay={1}
             animateOnScroll={false}
             className="primary sm"
           >
             GdScript
-          </AnimatedCopy>
-          <AnimatedCopy tag="h2" delay={1}>
+          </TexteAnime>
+          <TexteAnime tag="h2" delay={1}>
             The Legend of Godette
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section className="project-banner-img">
@@ -51,50 +51,50 @@ const Godette = () => {
 
         <section className="project-details">
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Projet
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Un jeu vidéo que j'ai créé en suivant une vidéo tutoriel
               (voir source) afin d'apprendre à utiliser Godot. J'ai donc appris à
               l'utiliser et à maîtriser GdScript. Cette vidéo m'a permis de comprendre
               beaucoup de concepts importants : les états, les animations, les
               collisions, les attaques, les sauts, les déplacements, les caméras, les
               ennemis, les boss, les interfaces, les objets, et même les sons.
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Année
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               2025
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Type
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Jeu vidéo
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Détails
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             <a href="https://www.youtube.com/watch?v=AoGOIiBo4Eg&t=7453s" target="_blank"><h4>Source Vidéo</h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
             <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Projet personnel, solo
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
         </section>
 
@@ -231,12 +231,12 @@ const Godette = () => {
         </div>
 
         <section className="next-project">
-          <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+          <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
             02 - 06
-          </AnimatedCopy>
-          <AnimatedCopy tag="h3" animateOnScroll={true}>
+          </TexteAnime>
+          <TexteAnime tag="h3" animateOnScroll={true}>
             PROJET SUIVANT
-          </AnimatedCopy>
+          </TexteAnime>
 
           <div className="next-project-img">
             <Link to={`/works/seeds`}>
@@ -246,9 +246,9 @@ const Godette = () => {
             </Link>
           </div>
 
-          <AnimatedCopy tag="h4" animateOnScroll={true}>
+          <TexteAnime tag="h4" animateOnScroll={true}>
             Creative Seeds
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
       </div>

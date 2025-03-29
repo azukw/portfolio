@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import "./Transition.css";
 
 const calculateRandomBlockDelay = (rowIndex, totalRows) => {
-  const blockDelay = Math.random() * 0.3; // Réduction du délai aléatoire
-  const rowDelay = (totalRows - rowIndex - 1) * 0.03; // Réduction du délai en cascade
+  const blockDelay = Math.random() * 0.3;
+  const rowDelay = (totalRows - rowIndex - 1) * 0.03; 
   return blockDelay + rowDelay;
 };
 
@@ -23,8 +23,8 @@ const Transition = (Page) => {
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 0 }}
                 transition={{
-                  duration: 0.6, // Animation plus rapide
-                  ease: [0.25, 1, 0.5, 1], // Accélération plus dynamique
+                  duration: 0.6, 
+                  ease: [0.25, 1, 0.5, 1], 
                   delay: calculateRandomBlockDelay(rowIndex, 10),
                 }}
               ></motion.div>
@@ -44,8 +44,8 @@ const Transition = (Page) => {
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 1 }}
                 transition={{
-                  duration: 0.6, // Même réduction de durée
-                  ease: [0.25, 1, 0.5, 1], // Même easing pour une sortie plus rapide
+                  duration: 0.6,
+                  ease: [0.25, 1, 0.5, 1], 
                   delay: calculateRandomBlockDelay(rowIndex, 10),
                 }}
               ></motion.div>

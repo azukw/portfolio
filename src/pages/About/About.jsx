@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
 
-import AnimatedCopy from "../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../components/TexteAnime/TexteAnime";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Footer from "../../components/Footer/Footer";
 import Marquee from "react-fast-marquee";
@@ -23,45 +23,45 @@ const About = () => {
           </Marquee>
         </section>
 
-        <section className="services">
-          <div className="services-col">
-            <div className="services-banner">
+        <section className="informations">
+          <div className="informations-col">
+            <div className="informations-banner">
               <img src="/about/about-hero.jpg" alt="" />
             </div>
           </div>
-          <div className="services-col">
-            <AnimatedCopy animateOnScroll={true} tag="h4">
+          <div className="informations-col">
+            <TexteAnime animateOnScroll={true} tag="h4">
               Actuellement étudiant à l'Université de Rennes en Licence 3 Informatique,
               j'ai pour passions l'informatique et les jeux vidéos. J'ai pu faire de nombreux
               projets en lien avec ces deux domaines, qu'ils soient personnels ou universitaires.
-            </AnimatedCopy>
+            </TexteAnime>
 
-            <div className="services-list">
-              <div className="service-list-row">
-                <div className="service-list-col">
+            <div className="informations-list">
+              <div className="information-list-row">
+                <div className="information-list-col">
                   <h5>Email</h5>
                 </div>
-                <div className="service-list-col">
+                <div className="information-list-col">
                   <a href="mailto:sami.ssaoud@gmail.com">sami.ssaoud@gmail.com</a>
                 </div>
               </div>
 
-              <div className="service-list-row">
-                <div className="service-list-col">
+              <div className="information-list-row">
+                <div className="information-list-col">
                   <h5>Actuellement à</h5>
                 </div>
-                <div className="service-list-col">
+                <div className="information-list-col">
                   <p>
                     Rennes
                   </p>
                 </div>
               </div>
 
-              <div className="service-list-row">
-                <div className="service-list-col">
+              <div className="information-list-row">
+                <div className="information-list-col">
                   <h5>Loisirs</h5>
                 </div>
-                <div className="service-list-col">
+                <div className="information-list-col">
                   <p>
                     Jeux Vidéo, Lecture, Badminton
                   </p>
@@ -71,33 +71,33 @@ const About = () => {
           </div>
         </section>
 
-        <section className="fav-tools">
+        <section className="sami-trucs">
 
-          <div className="fav-tools-list">
-            <div className="fav-tools-list-row">
+          <div className="sami-list">
+            <div className="sami-list-row">
 
             </div>
-            <div className="fav-tools-list-row">
-              <div className="fav-tool">
+            <div className="sami-list-row">
+              <div className="sami-truc">
                 <a href="/about/cv_sami-saoud.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="fav-tool-img">
+                  <div className="sami-truc-img">
                     <img src="/about/cv.jpg" alt="" />
                   </div>
                   <h4>Mon CV</h4>
                 </a>
               </div>
 
-              <div className="fav-tool">
+              <div className="sami-truc">
                 <a href="https://github.com/azukw/" target="_blank">
-                  <div className="fav-tool-img">
+                  <div className="sami-truc-img">
                     <img src="/about/gh.jpg" alt="" />
                   </div>
                   <h4>GitHub</h4>
                 </a>
               </div>
-              <div className="fav-tool">
+              <div className="sami-truc">
                 <a href="https://www.linkedin.com/in/sami-saoud-446836340/" target="_blank">
-                  <div className="fav-tool-img">
+                  <div className="sami-truc-img">
                     <img src="/about/li.jpg" alt="" />
                   </div>
                   <h4>LinkedIn</h4>

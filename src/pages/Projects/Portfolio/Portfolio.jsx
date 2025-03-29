@@ -4,7 +4,7 @@ import "../projects.css";
 
 
 import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
-import AnimatedCopy from "../../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
 
@@ -17,16 +17,16 @@ const Portfolio = () => {
     <ReactLenis root>
       <div className="page project">
         <section className="project-header">
-          <AnimatedCopy
+          <TexteAnime
             delay={1}
             animateOnScroll={false}
             className="primary sm"
           >
             HTML, CSS, Javascript
-          </AnimatedCopy>
-          <AnimatedCopy tag="h2" delay={1}>
+          </TexteAnime>
+          <TexteAnime tag="h2" delay={1}>
             Portfolio
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section className="project-banner-img">
@@ -37,10 +37,10 @@ const Portfolio = () => {
 
         <section className="project-details">
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Projet
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Un site web portfolio
               vitrine qui m’a permis de
               développer mes
@@ -49,37 +49,37 @@ const Portfolio = () => {
               site m'a notamment
               permis de découvrir les
               cartes ainsi que les sliders.
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Année
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               2024
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Type
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Site Web
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
 
           <div className="details">
-            <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
               Détails
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </AnimatedCopy>
-            <AnimatedCopy tag="h4" animateOnScroll={true}>
+            </TexteAnime>
+            <TexteAnime tag="h4" animateOnScroll={true}>
               Projet personnel, solo
-            </AnimatedCopy>
+            </TexteAnime>
           </div>
         </section>
 
@@ -111,12 +111,12 @@ const Portfolio = () => {
         </div>
 
         <section className="next-project">
-          <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
+          <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
             04 - 06
-          </AnimatedCopy>
-          <AnimatedCopy tag="h3" animateOnScroll={true}>
+          </TexteAnime>
+          <TexteAnime tag="h3" animateOnScroll={true}>
             PROJET SUIVANT
-          </AnimatedCopy>
+          </TexteAnime>
 
           <div className="next-project-img">
             <Link to={`/works/vitrine`}>
@@ -126,9 +126,9 @@ const Portfolio = () => {
             </Link>
           </div>
 
-          <AnimatedCopy tag="h4" animateOnScroll={true}>
+          <TexteAnime tag="h4" animateOnScroll={true}>
             Vitrine Boutique
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
       </div>

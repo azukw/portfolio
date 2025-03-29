@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Menu.css";
 
-import ThemeToggle from "../theme/ThemeToggle";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
@@ -91,12 +91,14 @@ const Menu = () => {
   }, []);
 
   useEffect(() => {
-    gsap.set(".menu-link-item-holder", { y: 125 });
+    gsap.set(".menu-link-item-tient", { y: 125 });
 
     menuAnimation.current = gsap.timeline({ paused: true }).to(".menu", {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "power4.inOut",
+      force3D: true,
+      willChange: "transform"
     });
 
     const createMenuBarAnimation = () => {
@@ -113,20 +115,24 @@ const Menu = () => {
           duration: 1,
           height: heightValue,
           ease: "power4.inOut",
+          force3D: true,
+          willChange: "transform"
         });
     };
 
     createMenuBarAnimation();
 
-  menuLinksAnimation.current = gsap
-    .timeline({ paused: true })
-    .to(".menu-link-item-holder", {
-      y: 0,
-      duration: 1.25,
-      stagger: 0.075,
-      ease: "power3.inOut",
-      delay: 0.125,
-    });
+    menuLinksAnimation.current = gsap
+      .timeline({ paused: true })
+      .to(".menu-link-item-tient", {
+        y: 0,
+        duration: 1.25,
+        stagger: 0.075,
+        ease: "power3.inOut",
+        delay: 0.125,
+        force3D: true,
+        willChange: "transform"
+      });
 
   const isPageReload = () => {
     if (window.performance) {
@@ -138,21 +144,17 @@ const Menu = () => {
     return false;
   };
 
-  // Only animate on page reload
   if (isPageReload()) {
-    // Set menu bar to be initially above the viewport
     gsap.set(".menu-bar", { y: -100, opacity: 0 });
     
-    // Animate menu bar from top after 4 seconds
     gsap.to(".menu-bar", {
       y: 0,
       opacity: 1,
       duration: 1,
       ease: "power3.out",
-      delay: 4  // 4 second delay only on reload
+      delay: 4  
     });
   } else {
-    // For navigation (not reload), set menu bar visible immediately
     gsap.set(".menu-bar", { y: 0, opacity: 1 });
   }
 }, [windowWidth]);
@@ -175,23 +177,19 @@ const Menu = () => {
   
       const currentScrollY = window.scrollY;
       
-      // Vérifier si l'utilisateur est en haut de la page
       if (currentScrollY <= 0) {
-        // Si en haut de la page, s'assurer que le menu est visible
         gsap.to(".menu-bar", {
           y: 0,
           duration: 1,
           ease: "power2.out",
         });
       } else if (currentScrollY > lastScrollY.current) {
-        // Si défilement vers le bas, cacher le menu
         gsap.to(".menu-bar", {
           y: -200,
           duration: 1,
           ease: "power2.out",
         });
       } else {
-        // Si défilement vers le haut, montrer le menu
         gsap.to(".menu-bar", {
           y: 0,
           duration: 1,
@@ -240,7 +238,7 @@ const Menu = () => {
             <div className="menu-links">
               {menuLinks.map((link, index) => (
                 <div key={index} className="menu-link-item">
-                  <div className="menu-link-item-holder">
+                  <div className="menu-link-item-tient">
                     <Link
                       className="menu-link"
                       to={link.path}

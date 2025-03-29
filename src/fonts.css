@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Rader";
-  src: url("/fonts/RaderPixel.otf") format("opentype");
+  src: url("/fonts/RaderPixel.otf") format("opentype"); /* Pixter */
   font-weight: bold;
   font-style: normal;
   font-display: swap;

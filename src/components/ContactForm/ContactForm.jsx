@@ -8,18 +8,14 @@ const ContactForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     
-    // Vérifier si une soumission est déjà en cours
     if (isSubmitting) return;
 
-    // Récupérer les données du formulaire
     const form = event.target;
     const formData = new FormData(form);
     
-    // Désactiver le bouton et empêcher les soumissions multiples
     setIsSubmitting(true);
 
     try {
-      // Soumettre le formulaire via fetch
       const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -28,27 +24,21 @@ const ContactForm = () => {
         }
       });
 
-      // Vérifier si la requête a réussi
       if (response.ok) {
-        // Afficher le message de confirmation
         setMessageSent(true);
 
-        // Réinitialiser le formulaire
         form.reset();
 
-        // Masquer le message après 3 secondes
         setTimeout(() => {
           setMessageSent(false);
         }, 3000);
       } else {
-        // Gérer les erreurs de réponse
         throw new Error('Erreur lors de l\'envoi du formulaire');
       }
     } catch (error) {
       console.error('Erreur:', error);
       alert('Une erreur est survenue. Veuillez réessayer.');
     } finally {
-      // Réactiver le bouton
       setIsSubmitting(false);
     }
   };
@@ -114,7 +104,6 @@ const ContactForm = () => {
         </div>
       </div>
 
-      {/* Message de confirmation */}
       {messageSent && (
         <div className="confirmation-message">
           Message Envoyé !

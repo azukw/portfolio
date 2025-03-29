@@ -93,8 +93,8 @@ const ParallaxImage = ({ src, alt, speed = 0.2 }) => {
         width: "100%",
         height: "100%",
         objectFit: "contain",
-        position: "relative", // Change absolute en relative
-        transform: isDesktop ? "translateY(0)" : "none", // Enlève le scale(1.5)
+        position: "relative", 
+        transform: isDesktop ? "translateY(0)" : "none", 
       }}
       
     />

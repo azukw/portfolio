@@ -27,11 +27,6 @@ function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
-    // We no longer need this timeout since the preloader handles its own completion
-    // The preloader will call setIsLoading(false) when it's done
-  }, []);
-
-  useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 1400);

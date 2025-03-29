@@ -6,6 +6,9 @@
   left: 0;
   pointer-events: none;
   z-index: 10;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .menu-bar {
@@ -24,6 +27,10 @@
   border: 1px dashed rgba(255, 255, 255, 0.25);
   pointer-events: all;
   z-index: 10000;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
 }
 
 .menu-bar-container {
@@ -120,6 +127,10 @@
   pointer-events: none;
   z-index: 100000;
   margin: 2em;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
 }
 
 .menu-link-item {
@@ -128,14 +139,18 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   text-align: center;
   pointer-events: all;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
 }
 
-.menu-link-item .menu-link-item-holder {
+.menu-link-item .menu-link-item-tient {
   position: relative;
   will-change: transform;
 }
 
-.menu-link-item .menu-link-item-holder a {
+.menu-link-item .menu-link-item-tient a {
   position: relative;
   color: white;
   font-family: "Rader";
@@ -172,7 +187,7 @@
     flex-direction: column;
   }
 
-  .menu-link-item .menu-link-item-holder a {
+  .menu-link-item .menu-link-item-tient a {
     font-size: 25vw;
   }
 

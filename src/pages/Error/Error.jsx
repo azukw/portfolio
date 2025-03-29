@@ -8,9 +8,7 @@ const Error = () => {
     const footerRef = useRef(null);
 
     useEffect(() => {
-        // Ensure refs are current before animating
         if (headerRef.current && footerRef.current) {
-            // Animate each span in the header
             const headerSpans = headerRef.current.querySelectorAll('span');
             
             gsap.fromTo(headerSpans, 
@@ -23,12 +21,11 @@ const Error = () => {
                     top: "0",
                     opacity: 1,
                     ease: "bounce.out",
-                    delay: 1,
+                    delay: 4,
                     stagger: 0.2,
                 }
             );
 
-            // Animate footer
             gsap.fromTo(footerRef.current, 
                 {
                     opacity: 0,
@@ -39,11 +36,11 @@ const Error = () => {
                     opacity: 1,
                     y: 0,
                     ease: "expo.inOut",
-                    delay: 2.4,
+                    delay: 4.5,
                 }
             );
         }
-    }, []); // Empty dependency array means this runs once after initial render
+    }, []); 
     
     return (
         <div className="not-found-container">

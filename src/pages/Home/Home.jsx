@@ -317,12 +317,10 @@ const Home = () => {
       }, 1);
     };
 
-    // Check if preloader is already complete
     if (!document.querySelector('.preloader-wrapper')) {
       handlePreloaderComplete();
     }
 
-    // Listen for preloader completion event
     window.addEventListener('preloaderComplete', handlePreloaderComplete);
 
     return () => {

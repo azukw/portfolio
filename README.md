@@ -58,3 +58,6 @@ src/
 ## Contact
 Pour toute question ou suggestion, n'hésitez pas à me contacter :
 - Email : sami.ssaoud@gmail.com
+
+## Détails
+Ce code contient du code qui vient du site [Reactbits](https://www.reactbits.dev), pour certaines animations de texte.

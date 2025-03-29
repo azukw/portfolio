@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Work.css";
-import AnimatedCopy from "../../components/AnimatedCopy/AnimatedCopy";
+import TexteAnime from "../../components/TexteAnime/TexteAnime";
 import Footer from "../../components/Footer/Footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -42,9 +42,9 @@ const Work = () => {
     <ReactLenis root>
       <div className="page work">
         <section ref={stickyWorkHeaderRef} className="sticky-work-header">
-          <AnimatedCopy tag="h1" animateOnScroll="true">
+          <TexteAnime tag="h1" animateOnScroll="true">
           ↓ Mes projets ↓
-          </AnimatedCopy>
+          </TexteAnime>
         </section>
 
         <section ref={homeWorkRef} className="home-work">
