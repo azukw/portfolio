@@ -192,6 +192,15 @@
   will-change: transform;
 }
 
+.hero-img img, 
+.hero-copy-wrapper, 
+.hero-text-left, 
+.hero-text-right, 
+.hero-tagline, 
+.skills span {
+  opacity: 0;
+}
+
 @media (max-width: 1000px) {
 
   .hero-text-left, .hero-text-right {

@@ -1,47 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
-const Preloader = () => {
+const Preloader = ({ onComplete }) => {
+  const [isAnimating, setIsAnimating] = useState(true);
+
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0 });
+    const tl = gsap.timeline({ 
+      delay: 0,
+      onComplete: () => {
+        // Set a state to track when animation completes
+        setIsAnimating(false);
+        // Call the onComplete prop to notify parent component
+        if (onComplete) onComplete();
+      }
+    });
     
     // Animate columns up
-    tl.to(".col", {
+    tl.to(".pl_col", {
       top: "0",
       duration: 3,
       ease: "power4.inOut"
     });
     
     // Animate items in each column with different stagger patterns
-    tl.to(".c-1 .item", {
+    tl.to(".pl_c-1 .pl_item", {
       top: "0",
       stagger: 0.25,
       duration: 3,
       ease: "power4.inOut"
     }, "-=2");
     
-    tl.to(".c-2 .item", {
+    tl.to(".pl_c-2 .pl_item", {
       top: "0",
       stagger: -0.25,
       duration: 3,
       ease: "power4.inOut"
     }, "-=4");
     
-    tl.to(".c-3 .item", {
+    tl.to(".pl_c-3 .pl_item", {
       top: "0",
       stagger: 0.25,
       duration: 3,
       ease: "power4.inOut"
     }, "-=4");
     
-    tl.to(".c-4 .item", {
+    tl.to(".pl_c-4 .pl_item", {
       top: "0",
       stagger: -0.25,
       duration: 3,
       ease: "power4.inOut"
     }, "-=4");
     
-    tl.to(".c-5 .item", {
+    tl.to(".pl_c-5 .pl_item", {
       top: "0",
       stagger: 0.25,
       duration: 3,
@@ -55,49 +65,50 @@ const Preloader = () => {
       ease: "power4.inOut"
     }, "-=2");
     
-    // Animate title
-    tl.to(".title p", {
-      top: 0,
+    // Fade out the preloader after scaling animation is partially complete
+    tl.to(".preloader-wrapper", {
+      opacity: 0,
       duration: 1,
-      ease: "power3.out",
-    }, "-=1.5");
-  }, []);
+      ease: "power2.inOut",
+      pointerEvents: "none"
+    }, "-=1.5"); // This starts 1.5 seconds before the timeline completes
+    
+    // Return cleanup function to kill animation if component unmounts
+    return () => {
+      tl.kill();
+    };
+  }, [onComplete]);
 
-  // Create arrays to distribute work images across columns
   const getColumnImages = (colIndex) => {
-    // We'll use work-1 through work-6 distributed across 5 columns
-    // Repeating some images to fill all slots
     const allImages = [
-      ['/work/work-1.jpg', '/work/work-2.jpg'],
-      ['/work/work-3.jpg', '/work/work-4.jpg'],
-      ['/work/work-5.jpg','', '/work/work-6.jpg'],
-      ['/work/work-1.jpg', '/work/work-2.jpg'],
-      ['/work/work-3.jpg', '/work/work-4.jpg']
+      ['/work/work-1.jpg', '/work/work-2.jpg', '/work/work-3.jpg'],
+      ['/work/work-4.jpg', '/work/work-5.jpg', '/work/work-6.jpg'],
+      ['/work/work-2.jpg', null, '/work/work-1.jpg'],
+      ['/work/work-6.jpg', '/work/work-3.jpg', '/work/work-4.jpg'],
+      ['/work/work-2.jpg', '/work/work-5.jpg', '/work/work-1.jpg'],
     ];
     
     return allImages[colIndex - 1];
   };
 
+  if (!isAnimating && typeof window !== 'undefined') {
+    return null;
+  }
+
   return (
     <div className="preloader-wrapper">
       <div className="preloader-container">
         {[1, 2, 3, 4, 5].map(colIndex => (
-          <div key={`col-${colIndex}`} className={`col c-${colIndex}`}>
+          <div key={`col-${colIndex}`} className={`pl_col pl_c-${colIndex}`}>
             {getColumnImages(colIndex).map((imgSrc, imgIndex) => (
-              <div key={`item-${colIndex}-${imgIndex}`} className="item">
-                <img src={imgSrc} alt={`Work ${imgIndex + 1}`} />
+              <div key={`pl_item-${colIndex}-${imgIndex}`} className={`pl_item ${!imgSrc ? 'empty-item' : ''}`}>
+                {imgSrc ? (
+                  <img src={imgSrc} alt={`Work ${imgIndex + 1}`} />
+                ) : null}
               </div>
             ))}
           </div>
         ))}
-      </div>
-      
-      <div className="content">
-        <div className="hero">
-          <div className="title">
-            <p>The Regeneration Site</p>
-          </div>
-        </div>
       </div>
       
       <style jsx>{`
@@ -105,48 +116,12 @@ const Preloader = () => {
           width: 100vw;
           height: 100vh;
           overflow: hidden;
-          background: #141414;
+          background: var(--plbg);
           font-family: "Neue Montreal", sans-serif;
           position: fixed;
           top: 0;
           left: 0;
           z-index: 9999;
-        }
-        
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        
-        .content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          z-index: 2;
-        }
-        
-        .hero {
-          position: absolute;
-          width: 95%;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          align-items: center;
-          color: #fff;
-        }
-        
-        .title {
-          width: 100%;
-          text-align: center;
-          font-size: 40px;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-        
-        .title p {
-          position: relative;
-          top: 50px;
         }
         
         .preloader-container {
@@ -157,7 +132,7 @@ const Preloader = () => {
           gap: 1em;
         }
         
-        .preloader-container .col {
+        .preloader-container .pl_col {
           position: relative;
           flex: 1;
           width: 100%;
@@ -166,7 +141,7 @@ const Preloader = () => {
           gap: 1em;
         }
         
-        .col .item {
+        .pl_col .pl_item {
           position: relative;
           flex: 1;
           width: 100%;
@@ -174,22 +149,26 @@ const Preloader = () => {
           overflow: hidden;
         }
         
-        .c-1, .c-3, .c-5 {
+        .pl_col .pl_item.empty-item {
+          background: var(--plfg);
+        }
+
+        .pl_col .pl_item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        .pl_c-1, .pl_c-3, .pl_c-5 {
           top: 100%;
         }
         
-        .c-1 .item, .c-3 .item, .c-5 .item {
+        .pl_c-1 .pl_item, .pl_c-3 .pl_item, .pl_c-5 .pl_item {
           top: 100%;
         }
         
-        .c-2 .item, .c-4 .item {
+        .pl_c-2 .pl_item, .pl_c-4 .pl_item {
           top: -100%;
-        }
-        
-        @media (max-width: 900px) {
-          .title {
-            font-size: 30px;
-          }
         }
       `}</style>
     </div>

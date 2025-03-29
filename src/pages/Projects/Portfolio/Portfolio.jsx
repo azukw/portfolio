@@ -41,12 +41,14 @@ const Portfolio = () => {
               Projet
             </AnimatedCopy>
             <AnimatedCopy tag="h4" animateOnScroll={true}>
-              Un jeu vidéo que j'ai créé en suivant une vidéo tutoriel
-              (voir source) afin d'apprendre à utiliser Godot. J'ai donc appris à
-              l'utiliser et à maîtriser GdScript. Cette vidéo m'a permis de comprendre
-              beaucoup de concepts importants : les états, les animations, les
-              collisions, les attaques, les sauts, les déplacements, les caméras, les
-              ennemis, les boss, les interfaces, les objets, et même les sons.
+              Un site web portfolio
+              vitrine qui m’a permis de
+              développer mes
+              compétences en
+              programmation CSS. Ce
+              site m'a notamment
+              permis de découvrir les
+              cartes ainsi que les sliders.
             </AnimatedCopy>
           </div>
 
@@ -73,7 +75,7 @@ const Portfolio = () => {
               Détails
             </AnimatedCopy>
             <AnimatedCopy tag="h4" animateOnScroll={true}>
-            <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
+              <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
             </AnimatedCopy>
             <AnimatedCopy tag="h4" animateOnScroll={true}>
               Projet personnel, solo
@@ -85,9 +87,7 @@ const Portfolio = () => {
 
           <div className="section-half">
             <div className="section-text">
-            <p>Un site web portfolio vitrine qui m'a permis de développer mes compétences 
-              en programmation CSS et JS. Ce site m'a notamment permis de découvrir les cartes 
-              ainsi que les sliders.</p>            
+              <p></p>
             </div>
           </div>
 
@@ -98,8 +98,8 @@ const Portfolio = () => {
 
           <div className="section-half">
             <div className="section-text">
-            <p>Après avoir terminé la première version, j'ai créé une deuxième 
-              version du site avec un carousel d'images.</p>            
+              <p>Après avoir terminé la première version, j'ai créé une deuxième
+                version du site avec un carousel d'images.</p>
             </div>
           </div>
 

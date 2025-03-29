@@ -254,6 +254,9 @@ const Home = () => {
         pinSpacing: false,
       });
     }
+  
+
+    
 
     return () => {
       pinTrigger.kill();
@@ -268,43 +271,96 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Création d'une timeline principale avec un délai de 2 secondes
+    const tl = gsap.timeline({ 
+      defaults: { 
+        ease: "power3.out",
+        duration: 1.2
+      },
+      delay: 2 // Délai de 2 secondes avant de commencer les animations
+    });
+  
+    tl.to(".hero-img img", {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      startAt: { y: -200 }
+    }, 0);
+  
+    tl.to(".hero-copy-wrapper", {
+      y: 0,
+      opacity: 1,
+      startAt: { y: 200 }
+    }, 0.2);
+  
+    tl.to(".hero-text-left", {
+      x: 0,
+      opacity: 1,
+      startAt: { x: -200 }
+    }, 0.4);
+  
+    tl.to(".hero-text-right", {
+      x: 0,
+      opacity: 1,
+      startAt: { x: 200 }
+    }, 0.6);
+  
+    tl.to(".hero-tagline", {
+      opacity: 1,
+      duration: 1.5
+    }, 0.8);
+  
+    tl.to(".skills span", {
+      opacity: 1,
+      y: 0,
+      stagger: 0.1,
+      duration: 0.8,
+      startAt: { y: 50 }
+    }, 1);
+  
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
     <ReactLenis root>
       <div className="page home">
         <section className="hero">
-        <div className="container" ref={containerRef}>
-          <div className="container">
+          <div className="container" ref={containerRef}>
+            <div className="container">
 
-            <div className="hero-img">
-              <img src="/home/hero.jpg" alt="" />
-            </div>
-            <div className="hero-copy">
-              <div className="hero-copy-wrapper">
-                <h1>Sami SAOUD</h1>
+              <div className="hero-img">
+                <img src="/home/hero.jpg" alt="" />
+              </div>
+              <div className="hero-copy">
+                <div className="hero-copy-wrapper">
+                  <h1>Sami SAOUD</h1>
+                </div>
+              </div>
+
+              <div className="hero-text-left anime-header">
+                <p>Passionné par l'informatique et les jeux vidéos.</p>
+              </div>
+
+              <div className="hero-text-right anime-header">
+                <p>Toujours en recherche d'innovation et de créativité.</p>
+              </div>
+
+
+              <div className="hero-tagline anime-header">
+                Étudiant en troisième année de Licence à l'Université de Rennes.
+              </div>
+
+              <div className="skills">
+                <span>Organisé</span>
+                <span>Esprit d'équipe</span>
+                <span>Créatif</span>
+                <span>Curieux</span>
               </div>
             </div>
-
-            <div className="hero-text-left anime-header">
-              <p>Passionné par l'informatique et les jeux vidéos.</p>
-            </div>
-
-            <div className="hero-text-right anime-header">
-              <p>Toujours en recherche d'innovation et de créativité.</p>
-            </div>
-
-
-            <div className="hero-tagline anime-header">
-              Étudiant en troisième année de Licence à l'Université de Rennes.
-            </div>
-
-            <div className="skills">
-              <span>Organisé</span>
-              <span>Esprit d'équipe</span>
-              <span>Créatif</span>
-              <span>Curieux</span>
-            </div>
           </div>
-        </div>
         </section>
 
         <section ref={stickyTitlesRef} className="sticky-titles">
@@ -317,34 +373,34 @@ const Home = () => {
             <p className="primary sm">Scrollez</p>
           </div>
           <h2 ref={(el) => (titlesRef.current[0] = el)}>
-          <DecryptedText
-                text="Étudiant à l'Université de Rennes."
-                maxIterations={20}
-                revealDirection="center"
-                sequential={true}
-                animateOn="view"
-              />
+            <DecryptedText
+              text="Étudiant à l'Université de Rennes."
+              maxIterations={20}
+              revealDirection="center"
+              sequential={true}
+              animateOn="view"
+            />
           </h2>
           <h2 ref={(el) => (titlesRef.current[1] = el)}>
-          <DecryptedText
-                text="Je suis passionné par l'informatique et les jeux vidéos."
-                maxIterations={20}
-                revealDirection="center"
-                sequential={true}
-                animateOn="view"
-              />
+            <DecryptedText
+              text="Je suis passionné par l'informatique et les jeux vidéos."
+              maxIterations={20}
+              revealDirection="center"
+              sequential={true}
+              animateOn="view"
+            />
           </h2>
           <h2 ref={(el) => (titlesRef.current[2] = el)}>
-          <DecryptedText
-                text="Bienvenue dans mon portfolio !"
-                maxIterations={20}
-                revealDirection="center"
-                sequential={true}
-                animateOn="view"
-              />
+            <DecryptedText
+              text="Bienvenue dans mon portfolio !"
+              maxIterations={20}
+              revealDirection="center"
+              sequential={true}
+              animateOn="view"
+            />
           </h2>
         </section>
-        <ContactForm/>
+        <ContactForm />
         <Footer />
       </div>
     </ReactLenis>

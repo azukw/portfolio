@@ -144,28 +144,38 @@ const Menu = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (isMenuOpen) return;
-
+  
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current) {
+      
+      // Vérifier si l'utilisateur est en haut de la page
+      if (currentScrollY <= 0) {
+        // Si en haut de la page, s'assurer que le menu est visible
+        gsap.to(".menu-bar", {
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+        });
+      } else if (currentScrollY > lastScrollY.current) {
+        // Si défilement vers le bas, cacher le menu
         gsap.to(".menu-bar", {
           y: -200,
           duration: 1,
           ease: "power2.out",
         });
       } else {
+        // Si défilement vers le haut, montrer le menu
         gsap.to(".menu-bar", {
           y: 0,
           duration: 1,
           ease: "power2.out",
         });
       }
-
+  
       lastScrollY.current = currentScrollY;
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
