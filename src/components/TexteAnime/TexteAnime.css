@@ -1,4 +1,4 @@
-.animated-copy [class^="line-"] {
+.texte-anime [class^="line-"] {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   display: block;
   overflow: hidden;
@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.animated-copy [class^="line-inner-"] {
+.texte-anime [class^="line-inner-"] {
   position: relative;
   display: block;
   will-change: transform;

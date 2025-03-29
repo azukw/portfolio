@@ -117,7 +117,7 @@ const TexteAnime = ({
   return (
     <Tag
       ref={copyRef}
-      className={`animated-copy ${className}`}
+      className={`texte-anime ${className}`}
       data-copy-id={copyId}
     >
       {children}
