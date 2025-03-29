@@ -73,8 +73,8 @@
 .hero-text-left,
 .hero-text-right {
   position: absolute;
-  top: 30%;
-  width: 25%;
+  top: 35%;
+  width: 45%;
   text-align: center;
 }
 
@@ -83,11 +83,11 @@
 }
 
 .hero-text-left {
-  left: 10%;
+  left: 0%;
 }
 
 .hero-text-right {
-  right: 10%;
+  right: 0%;
 }
 
 

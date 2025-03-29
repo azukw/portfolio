@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import Menu from "./components/Menu/Menu";
 import ReturnToTop from "./components/ReturnToTop/ReturnToTop";
+// import Preloader from "./components/PreloaderTest/Preloader";
 import Preloader from "./components/BlockRevealPreloader/BlockRevealPreloader";
 
 import Home from "./pages/Home/Home";

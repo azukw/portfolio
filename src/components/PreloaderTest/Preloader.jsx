@@ -1,82 +1,197 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import "./Preloader.css";
-import img1 from "/work/work-3.jpg";
-import img2 from "/work/work-4.jpg";
-import img3 from "/work/work-1.jpg";
-import img4 from "/work/work-2.jpg";
-import img5 from "/work/work-5.jpg";
-import img6 from "/work/work-6.jpg";
-import logo from "/site-icon.png";
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
 
-const images = [img1, img2, img3, logo, img4, img5, img6];
-
-const Preloader = ({ setIsLoaded }) => {
-  const loaderRef = useRef(null);
-
+const Preloader = () => {
   useEffect(() => {
-    const loader = loaderRef.current;
+    const tl = gsap.timeline({ delay: 0 });
     
-    // Timeline complète de l'animation
-    const tl = gsap.timeline({
-      onComplete: () => {
-        // Désactiver complètement le préchargeur
-        gsap.to(loader, {
-          display: 'none',
-          duration: 0,
-          onComplete: () => {
-            setIsLoaded(true);
-          }
-        });
-      }
+    // Animate columns up
+    tl.to(".col", {
+      top: "0",
+      duration: 3,
+      ease: "power4.inOut"
     });
- 
-    // Animations initiales
-    gsap.set(".img", { y: 500, opacity: 0 });
-    gsap.set(".loader-imgs", { x: -500 });
- 
-    // Animation des images
-    tl.to(".img", {
-      y: 0,
-      opacity: 1,
-      duration: 1.5,
-      stagger: 0.05,
-      ease: "power3.inOut",
-    })
-    .to(".loader-imgs", { 
-      x: 0, 
-      duration: 3, 
-      ease: "power3.inOut" 
-    }, "-=2.5")
-    .to(".img:not(#loader-logo)", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+    
+    // Animate items in each column with different stagger patterns
+    tl.to(".c-1 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=2");
+    
+    tl.to(".c-2 .item", {
+      top: "0",
+      stagger: -0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
+    
+    tl.to(".c-3 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
+    
+    tl.to(".c-4 .item", {
+      top: "0",
+      stagger: -0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
+    
+    tl.to(".c-5 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
+    
+    // Scale up container
+    tl.to(".preloader-container", {
+      scale: 6,
+      duration: 4,
+      ease: "power4.inOut"
+    }, "-=2");
+    
+    // Animate title
+    tl.to(".title p", {
+      top: 0,
       duration: 1,
-      stagger: 0.1,
-      ease: "power3.inOut",
-    }, "-=1")
-    .to(loader, { 
-      opacity: 0, 
-      duration: 0.5, 
-      ease: "power3.inOut" 
-    });
+      ease: "power3.out",
+    }, "-=1.5");
+  }, []);
 
-    // Nettoyer l'animation si nécessaire
-    return () => tl.kill();
-  }, [setIsLoaded]);
- 
+  // Create arrays to distribute work images across columns
+  const getColumnImages = (colIndex) => {
+    // We'll use work-1 through work-6 distributed across 5 columns
+    // Repeating some images to fill all slots
+    const allImages = [
+      ['/work/work-1.jpg', '/work/work-2.jpg'],
+      ['/work/work-3.jpg', '/work/work-4.jpg'],
+      ['/work/work-5.jpg','', '/work/work-6.jpg'],
+      ['/work/work-1.jpg', '/work/work-2.jpg'],
+      ['/work/work-3.jpg', '/work/work-4.jpg']
+    ];
+    
+    return allImages[colIndex - 1];
+  };
+
   return (
-    <div ref={loaderRef} className="loader">
-      <div className="loader-imgs">
-        {images.map((src, index) => (
-          <div 
-            className="img" 
-            id={index === 3 ? "loader-logo" : ""} 
-            key={index}
-          >
-            <img src={src} alt={`project-${index + 1}`} />
+    <div className="preloader-wrapper">
+      <div className="preloader-container">
+        {[1, 2, 3, 4, 5].map(colIndex => (
+          <div key={`col-${colIndex}`} className={`col c-${colIndex}`}>
+            {getColumnImages(colIndex).map((imgSrc, imgIndex) => (
+              <div key={`item-${colIndex}-${imgIndex}`} className="item">
+                <img src={imgSrc} alt={`Work ${imgIndex + 1}`} />
+              </div>
+            ))}
           </div>
         ))}
       </div>
+      
+      <div className="content">
+        <div className="hero">
+          <div className="title">
+            <p>The Regeneration Site</p>
+          </div>
+        </div>
+      </div>
+      
+      <style jsx>{`
+        .preloader-wrapper {
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          background: #141414;
+          font-family: "Neue Montreal", sans-serif;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 9999;
+        }
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        .content {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+        
+        .hero {
+          position: absolute;
+          width: 95%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          color: #fff;
+        }
+        
+        .title {
+          width: 100%;
+          text-align: center;
+          font-size: 40px;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .title p {
+          position: relative;
+          top: 50px;
+        }
+        
+        .preloader-container {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          gap: 1em;
+        }
+        
+        .preloader-container .col {
+          position: relative;
+          flex: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+        }
+        
+        .col .item {
+          position: relative;
+          flex: 1;
+          width: 100%;
+          background: #222;
+          overflow: hidden;
+        }
+        
+        .c-1, .c-3, .c-5 {
+          top: 100%;
+        }
+        
+        .c-1 .item, .c-3 .item, .c-5 .item {
+          top: 100%;
+        }
+        
+        .c-2 .item, .c-4 .item {
+          top: -100%;
+        }
+        
+        @media (max-width: 900px) {
+          .title {
+            font-size: 30px;
+          }
+        }
+      `}</style>
     </div>
   );
 };
