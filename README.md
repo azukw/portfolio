@@ -1,7 +1,7 @@
 # Portfolio Personnel - Sami Saoud
 
 <div align="center">
-  <img src="/preview.png" alt="Portfolio" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/public/preview.png" alt="Portfolio" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
 ## À Propos
