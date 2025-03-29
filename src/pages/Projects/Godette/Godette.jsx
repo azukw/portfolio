@@ -241,7 +241,7 @@ const Godette = () => {
           <div className="next-project-img">
             <Link to={`/works/seeds`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/work-2.jpg" alt="" />
+                <img src="/work/work-2.jpg" alt="" />
               </div>
             </Link>
           </div>

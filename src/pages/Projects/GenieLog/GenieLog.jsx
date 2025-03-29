@@ -129,7 +129,7 @@ const GenieLog = () => {
           <div className="next-project-img">
             <Link to={`/works/casino`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/work-6.jpg" alt="" />
+                <img src="/work/work-6.jpg" alt="" />
               </div>
             </Link>
           </div>

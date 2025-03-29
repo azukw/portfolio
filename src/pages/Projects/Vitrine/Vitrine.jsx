@@ -122,7 +122,7 @@ const Vitrine = () => {
           <div className="next-project-img">
             <Link to={`/works/genielog`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/work-5.jpg" alt="" />
+                <img src="/work/work-5.jpg" alt="" />
               </div>
             </Link>
           </div>

@@ -132,7 +132,7 @@ const Casino = () => {
           <div className="next-project-img">
             <Link to={`/works`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/soon.jpg" alt="" />
+                <img src="/work/soon.jpg" alt="" />
               </div>
             </Link>
           </div>

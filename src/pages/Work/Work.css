@@ -73,42 +73,49 @@
   align-items: center;
   text-align: center;
   gap: 2em;
+  position: relative; /* Pour le positionnement du séparateur */
 }
 
-.hobbies {
-  width: 100vw;
-  padding: 2em;
-  padding-bottom: 0;
-  display: flex;
-  gap: 1em;
+/* Séparateur horizontal entre les projets */
+.home-work-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -4em; /* Moitié du gap (8em) entre les éléments */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* Longueur de la barre */
+  height: 1px; /* Épaisseur de la barre */
+  background-color: var(--fg, #333); /* Couleur de la barre */
 }
 
-.hobby {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  aspect-ratio: 1;
-  border: 1px dashed var(--fg);
-  border-radius: 1em;
+.work-item-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Ratio 16:9 pour un format paysage */
+  position: relative;
+  overflow: hidden;
+}
+
+.work-item-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pour couvrir l'espace tout en préservant le ratio */
+  object-position: center; /* Centre l'image */
 }
 
 @media (max-width: 1000px) {
   
   .hero,
   .sticky-titles,
-  .sticky-work-header,
-  .hobbies {
+  .sticky-work-header {
     padding: 1.25em;
   }
 
   .sticky-titles h2 {
     width: 90%;
-  }
-
-  .hobbies {
-    padding-bottom: 0;
   }
 
   .home-work {
@@ -117,14 +124,5 @@
 
   .home-work-list {
     width: 100%;
-  }
-
-  .hobbies {
-    flex-direction: column;
-    gap: 1.25em;
-  }
-
-  .hobby {
-    aspect-ratio: 5/3;
   }
 }

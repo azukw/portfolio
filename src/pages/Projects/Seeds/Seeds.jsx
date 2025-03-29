@@ -118,7 +118,7 @@ const Seeds = () => {
           <div className="next-project-img">
             <Link to={`/works/portfolio`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/work-3.jpg" alt="" />
+                <img src="/work/work-3.jpg" alt="" />
               </div>
             </Link>
           </div>

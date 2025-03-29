@@ -121,7 +121,7 @@ const Portfolio = () => {
           <div className="next-project-img">
             <Link to={`/works/vitrine`}>
               <div className="next-project-img-wrapper">
-                <ParallaxImage src="/work/work-4.jpg" alt="" />
+                <img src="/work/work-4.jpg" alt="" />
               </div>
             </Link>
           </div>
