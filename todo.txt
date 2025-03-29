@@ -1,2 +1,0 @@
-- gerer le temps danim qui doit demarrer apres le preloader,
-animer le menu qui vient den haut

@@ -203,7 +203,7 @@ const Home = () => {
           duration: 0.3,
           ease: "power2.out",
         },
-        1
+        0.75
       )
 
       .to(
@@ -214,7 +214,7 @@ const Home = () => {
           duration: 0.3,
           ease: "power2.in",
         },
-        1.25
+        1
       );
 
     masterTimeline
@@ -226,7 +226,7 @@ const Home = () => {
           duration: 0.3,
           ease: "power2.out",
         },
-        2.5
+        2
       )
 
       .to(
@@ -237,7 +237,7 @@ const Home = () => {
           duration: 0.3,
           ease: "power2.in",
         },
-        2.75
+        2.5
       );
 
     const workHeaderSection = stickyWorkHeaderRef.current;
@@ -254,9 +254,6 @@ const Home = () => {
         pinSpacing: false,
       });
     }
-  
-
-    
 
     return () => {
       pinTrigger.kill();
@@ -272,55 +269,64 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // Création d'une timeline principale avec un délai de 2 secondes
-    const tl = gsap.timeline({ 
-      defaults: { 
-        ease: "power3.out",
-        duration: 1.2
-      },
-      delay: 2 // Délai de 2 secondes avant de commencer les animations
-    });
-  
-    tl.to(".hero-img img", {
-      y: 0,
-      opacity: 1,
-      duration: 1.5,
-      startAt: { y: -200 }
-    }, 0);
-  
-    tl.to(".hero-copy-wrapper", {
-      y: 0,
-      opacity: 1,
-      startAt: { y: 200 }
-    }, 0.2);
-  
-    tl.to(".hero-text-left", {
-      x: 0,
-      opacity: 1,
-      startAt: { x: -200 }
-    }, 0.4);
-  
-    tl.to(".hero-text-right", {
-      x: 0,
-      opacity: 1,
-      startAt: { x: 200 }
-    }, 0.6);
-  
-    tl.to(".hero-tagline", {
-      opacity: 1,
-      duration: 1.5
-    }, 0.8);
-  
-    tl.to(".skills span", {
-      opacity: 1,
-      y: 0,
-      stagger: 0.1,
-      duration: 0.8,
-      startAt: { y: 50 }
-    }, 1);
-  
+    const handlePreloaderComplete = () => {
+      const tl = gsap.timeline({ 
+        defaults: { 
+          ease: "power3.out",
+          duration: 1.2
+        },
+        delay: 0
+      });
+    
+      tl.to(".hero-img img", {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        startAt: { y: -200 }
+      }, 0);
+    
+      tl.to(".hero-copy-wrapper", {
+        y: 0,
+        opacity: 1,
+        startAt: { y: 200 }
+      }, 0.2);
+    
+      tl.to(".hero-text-left", {
+        x: 0,
+        opacity: 1,
+        startAt: { x: -200 }
+      }, 0.4);
+    
+      tl.to(".hero-text-right", {
+        x: 0,
+        opacity: 1,
+        startAt: { x: 200 }
+      }, 0.6);
+    
+      tl.to(".hero-tagline", {
+        opacity: 1,
+        duration: 1.5
+      }, 0.8);
+    
+      tl.to(".skills span", {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        startAt: { y: 50 }
+      }, 1);
+    };
+
+    // Check if preloader is already complete
+    if (!document.querySelector('.preloader-wrapper')) {
+      handlePreloaderComplete();
+    }
+
+    // Listen for preloader completion event
+    window.addEventListener('preloaderComplete', handlePreloaderComplete);
+
     return () => {
-      tl.kill();
+      window.removeEventListener('preloaderComplete', handlePreloaderComplete);
     };
   }, []);
 
@@ -349,7 +355,7 @@ const Home = () => {
               </div>
 
 
-              <div className="hero-tagline anime-header">
+              <div className="hero-tagline anime-text">
                 Étudiant en troisième année de Licence à l'Université de Rennes.
               </div>
 
@@ -375,7 +381,6 @@ const Home = () => {
           <h2 ref={(el) => (titlesRef.current[0] = el)}>
             <DecryptedText
               text="Étudiant à l'Université de Rennes."
-              maxIterations={20}
               revealDirection="center"
               sequential={true}
               animateOn="view"
@@ -384,7 +389,6 @@ const Home = () => {
           <h2 ref={(el) => (titlesRef.current[1] = el)}>
             <DecryptedText
               text="Je suis passionné par l'informatique et les jeux vidéos."
-              maxIterations={20}
               revealDirection="center"
               sequential={true}
               animateOn="view"
@@ -393,7 +397,6 @@ const Home = () => {
           <h2 ref={(el) => (titlesRef.current[2] = el)}>
             <DecryptedText
               text="Bienvenue dans mon portfolio !"
-              maxIterations={20}
               revealDirection="center"
               sequential={true}
               animateOn="view"

@@ -1,15 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
+import './Preloader.css';
+
 const Preloader = ({ onComplete }) => {
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
+    // Block scrolling when the preloader starts
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100%';
+    document.body.style.position = 'fixed';
+    document.body.style.top = '0';
+    document.body.style.width = '100%';
+    
     const tl = gsap.timeline({ 
       delay: 0,
       onComplete: () => {
+        const event = new CustomEvent('preloaderComplete');
+        window.dispatchEvent(event);
         // Set a state to track when animation completes
         setIsAnimating(false);
+        
+        // Re-enable scrolling when animation completes
+        document.body.style.overflow = '';
+        document.body.style.height = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        
         // Call the onComplete prop to notify parent component
         if (onComplete) onComplete();
       }
@@ -18,7 +37,7 @@ const Preloader = ({ onComplete }) => {
     // Animate columns up
     tl.to(".pl_col", {
       top: "0",
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
     });
     
@@ -26,42 +45,42 @@ const Preloader = ({ onComplete }) => {
     tl.to(".pl_c-1 .pl_item", {
       top: "0",
       stagger: 0.25,
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
-    }, "-=2");
+    }, "-=1");
     
     tl.to(".pl_c-2 .pl_item", {
       top: "0",
       stagger: -0.25,
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
-    }, "-=4");
+    }, "-=3");
     
     tl.to(".pl_c-3 .pl_item", {
       top: "0",
       stagger: 0.25,
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
     }, "-=4");
     
     tl.to(".pl_c-4 .pl_item", {
       top: "0",
       stagger: -0.25,
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
     }, "-=4");
     
     tl.to(".pl_c-5 .pl_item", {
       top: "0",
       stagger: 0.25,
-      duration: 3,
+      duration: 2,
       ease: "power4.inOut"
-    }, "-=4");
+    }, "-=3");
     
     // Scale up container
     tl.to(".preloader-container", {
       scale: 6,
-      duration: 4,
+      duration: 3,
       ease: "power4.inOut"
     }, "-=2");
     
@@ -76,9 +95,13 @@ const Preloader = ({ onComplete }) => {
     // Return cleanup function to kill animation if component unmounts
     return () => {
       tl.kill();
+      // Make sure to re-enable scrolling if the component unmounts
+      document.body.style.overflow = '';
+      document.body.style.height = '';
     };
   }, [onComplete]);
 
+  
   const getColumnImages = (colIndex) => {
     const allImages = [
       ['/work/work-1.jpg', '/work/work-2.jpg', '/work/work-3.jpg'],
@@ -110,67 +133,6 @@ const Preloader = ({ onComplete }) => {
           </div>
         ))}
       </div>
-      
-      <style jsx>{`
-        .preloader-wrapper {
-          width: 100vw;
-          height: 100vh;
-          overflow: hidden;
-          background: var(--plbg);
-          font-family: "Neue Montreal", sans-serif;
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 9999;
-        }
-        
-        .preloader-container {
-          position: fixed;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          gap: 1em;
-        }
-        
-        .preloader-container .pl_col {
-          position: relative;
-          flex: 1;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 1em;
-        }
-        
-        .pl_col .pl_item {
-          position: relative;
-          flex: 1;
-          width: 100%;
-          background: #222;
-          overflow: hidden;
-        }
-        
-        .pl_col .pl_item.empty-item {
-          background: var(--plfg);
-        }
-
-        .pl_col .pl_item img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        
-        .pl_c-1, .pl_c-3, .pl_c-5 {
-          top: 100%;
-        }
-        
-        .pl_c-1 .pl_item, .pl_c-3 .pl_item, .pl_c-5 .pl_item {
-          top: 100%;
-        }
-        
-        .pl_c-2 .pl_item, .pl_c-4 .pl_item {
-          top: -100%;
-        }
-      `}</style>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+# Licence de mon Portfolio
+(c) 2025 Sami Saoud - Tous droits réservés.
+
+Ce projet est propriétaire. Toute reproduction, modification ou distribution sans autorisation est interdite.
+
+# Licences de Code Tiers
+Ce projet contient du code sous licence MIT provenant des sources suivantes :
+- [Pacman](https://github.com/bward2/pacman-js) - Licence MIT
+Voir le fichier `LICENSE` de chaque projet tiers pour plus de détails.

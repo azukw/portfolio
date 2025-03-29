@@ -4,6 +4,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Sami Saoud",
+  "description": "Portfolio",
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "gsap",
+    "framer-motion"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azukw/samisaoud"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

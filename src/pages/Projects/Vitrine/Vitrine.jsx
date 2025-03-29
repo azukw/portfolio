@@ -38,7 +38,7 @@ const Vitrine = () => {
         <section className="project-details">
           <div className="details">
             <AnimatedCopy tag="p" animateOnScroll={true} className="primary sm">
-              Projet
+              Vitrine Boutique
             </AnimatedCopy>
             <AnimatedCopy tag="h4" animateOnScroll={true}>
             Un site web de boutique que j'ai créé afin d'apprendre à créer des serveurs web 

@@ -118,16 +118,44 @@ const Menu = () => {
 
     createMenuBarAnimation();
 
-    menuLinksAnimation.current = gsap
-      .timeline({ paused: true })
-      .to(".menu-link-item-holder", {
-        y: 0,
-        duration: 1.25,
-        stagger: 0.075,
-        ease: "power3.inOut",
-        delay: 0.125,
-      });
-  }, [windowWidth]);
+  menuLinksAnimation.current = gsap
+    .timeline({ paused: true })
+    .to(".menu-link-item-holder", {
+      y: 0,
+      duration: 1.25,
+      stagger: 0.075,
+      ease: "power3.inOut",
+      delay: 0.125,
+    });
+
+  const isPageReload = () => {
+    if (window.performance) {
+      const navEntries = performance.getEntriesByType('navigation');
+      if (navEntries.length > 0) {
+        return navEntries[0].type === 'reload';
+      }
+    }
+    return false;
+  };
+
+  // Only animate on page reload
+  if (isPageReload()) {
+    // Set menu bar to be initially above the viewport
+    gsap.set(".menu-bar", { y: -100, opacity: 0 });
+    
+    // Animate menu bar from top after 4 seconds
+    gsap.to(".menu-bar", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: 4  // 4 second delay only on reload
+    });
+  } else {
+    // For navigation (not reload), set menu bar visible immediately
+    gsap.set(".menu-bar", { y: 0, opacity: 1 });
+  }
+}, [windowWidth]);
 
   useEffect(() => {
     if (isMenuOpen) {
