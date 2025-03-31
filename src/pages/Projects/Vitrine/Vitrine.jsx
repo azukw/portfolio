@@ -120,7 +120,7 @@ const Vitrine = () => {
           </TexteAnime>
 
           <div className="next-project-img">
-            <Link to={`/works/genielog`}>
+            <Link to={`/works/ctrlaltelite`}>
               <div className="next-project-img-wrapper">
                 <img src="/work/work-5.jpg" alt="" />
               </div>
