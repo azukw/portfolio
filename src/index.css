@@ -7,6 +7,7 @@
   --fg200: #ffffff;
   --plbg : #ffffff;
   --plfg : #000000;
+  --filter: invert(1);
 }
 
 .light-mode {
@@ -16,6 +17,7 @@
   --fg200: #000000;
   --plbg : #000000;
   --plfg : #F7F6F2;
+  --filter: invert(0);
 }
 
 * {
