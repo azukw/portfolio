@@ -25,7 +25,7 @@ const Vitrine = () => {
             HTML, CSS, Javascript, Python (Flask)
           </TexteAnime>
           <TexteAnime tag="h2" delay={1}>
-            Portfolio
+            Vitrine Boutique
           </TexteAnime>
         </section>
 
@@ -38,7 +38,7 @@ const Vitrine = () => {
         <section className="project-details">
           <div className="details">
             <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
-              Vitrine Boutique
+              Projet
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
             Un site web de boutique que j'ai créé afin d'apprendre à créer des serveurs web 
