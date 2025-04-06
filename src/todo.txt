@@ -1,4 +1,0 @@
-regler pb chargement video site sur tel,
-réduire le lag du preloader,
-regler la taille img seeds sur tel 
-reduire l'attente du 404
