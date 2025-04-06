@@ -12,17 +12,14 @@ Ce portfolio est un site web interactif que j'ai fais avec React et Vite. Il pr�
 - GSAP
 - Framer Motion
 - React Router
-- Lenis (Smooth Scroll)
+- Lenis
 
 ## Fonctionnalités
-- 🎨 Design moderne et responsive
-- ✨ Animations fluides et interactives
-- 📱 Interface adaptative pour tous les appareils
-- 🖼️ Galerie de projets avec effets de parallaxe
-- 📝 Formulaire de contact intégré
-- 🌐 Navigation intuitive
-- 🔄 Transitions de page élégantes
-- 📜 Défilement fluide
+- 📱 Interface responsive
+- 🖼️ Des effets parallaxe
+- 📝 Formulaire de contact
+- 🔄 Transitions de page
+- 📜 Smooth Scroll avec Lenis
 
 ## Installation
 
