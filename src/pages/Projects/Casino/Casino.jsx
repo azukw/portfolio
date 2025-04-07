@@ -7,6 +7,7 @@ import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
 import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
+import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader";
 
 import Banner from "/work/work-6.jpg"
 import Aim from "/projects/Casino/Aim.mp4"
@@ -90,7 +91,7 @@ const Casino = () => {
 
 
           <div className="section-full-video">
-            <video src={Aim} autoPlay muted loop></video>
+            <VideoWithLoader src={Aim} />
           </div>
 
           <div className="section-half">
@@ -102,7 +103,7 @@ const Casino = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Bingo} autoPlay muted loop></video>
+            <VideoWithLoader src={Bingo} />
           </div>
 
           <div className="section-half">
@@ -115,7 +116,7 @@ const Casino = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Crash} autoPlay muted loop></video>
+            <VideoWithLoader src={Crash} />
           </div>
 
 

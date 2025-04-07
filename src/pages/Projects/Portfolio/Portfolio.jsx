@@ -7,6 +7,7 @@ import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
 import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
+import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader";
 
 import Banner from "/work/work-3.jpg"
 import Video1 from "/projects/Portfolio/exSite.mp4"
@@ -42,7 +43,7 @@ const Portfolio = () => {
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
               Un site web portfolio
-              vitrine qui m’a permis de
+              vitrine qui m'a permis de
               développer mes
               compétences en
               programmation CSS. Ce
@@ -93,7 +94,7 @@ const Portfolio = () => {
 
 
           <div className="section-full-video">
-            <video src={Video1} autoPlay muted loop></video>
+            <VideoWithLoader src={Video1} />
           </div>
 
           <div className="section-half">
@@ -104,7 +105,7 @@ const Portfolio = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Video2} autoPlay muted loop></video>
+            <VideoWithLoader src={Video2} />
           </div>
 
 

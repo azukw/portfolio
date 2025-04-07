@@ -7,6 +7,7 @@ import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
 import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
+import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader";
 
 import Banner from "/work/work-4.jpg"
 import Code from "/projects/Vitrine/code.png"
@@ -105,7 +106,7 @@ const Vitrine = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Video} autoPlay muted loop></video>
+            <VideoWithLoader src={Video} />
           </div>
 
 

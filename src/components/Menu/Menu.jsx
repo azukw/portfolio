@@ -221,7 +221,7 @@ const Menu = () => {
         <div className="menu-bar-container">
           <div className="menu-logo" onClick={closeMenu}>
             <Link to="/">
-              <img src="logo.png" alt="" />
+              <img src="/logo.png" alt="Logo" />
             </Link>
           </div>
           <div className="menu-actions">

@@ -7,6 +7,7 @@ import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
 import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
+import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader";
 
 import Banner from "/work/work-1.jpg"
 import Code from "/projects/Godette/code.png"
@@ -155,7 +156,7 @@ const Godette = () => {
 
 
           <div className="section-full-video">
-            <video src={Preview} autoPlay muted loop></video>
+            <VideoWithLoader src={Preview} />
           </div>
 
           <div className="section-half">
@@ -171,19 +172,19 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Attack} autoPlay muted loop></video>
+              <VideoWithLoader src={Attack} />
             </div>
             <div className="section-media">
-              <video src={Jump} autoPlay muted loop></video>
+              <VideoWithLoader src={Jump} />
             </div>
           </div>
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Run} autoPlay muted loop></video>
+              <VideoWithLoader src={Run} />
             </div>
             <div className="section-media">
-              <video src={Swap} autoPlay muted loop></video>
+              <VideoWithLoader src={Swap} />
             </div>
           </div>
 
@@ -201,10 +202,10 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={FightWarrior} autoPlay muted loop></video>
+              <VideoWithLoader src={FightWarrior} />
             </div>
             <div className="section-media">
-              <video src={FightMage} autoPlay muted loop></video>
+              <VideoWithLoader src={FightMage} />
             </div>
           </div>
 
@@ -220,10 +221,10 @@ const Godette = () => {
 
           <div className="section-half">
             <div className="section-media">
-              <video src={Castle} autoPlay muted loop></video>
+              <VideoWithLoader src={Castle} />
             </div>
             <div className="section-media">
-              <video src={FightBoss} autoPlay muted loop></video>
+              <VideoWithLoader src={FightBoss} />
             </div>
           </div>
 

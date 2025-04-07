@@ -7,6 +7,7 @@ import ParallaxImage from "../../../components/ParallaxImage/ParallaxImage";
 import TexteAnime from "../../../components/TexteAnime/TexteAnime";
 import ReactLenis from "lenis/react";
 import Transition from "../../../components/Transition/Transition";
+import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader";
 
 import Banner from "/work/work-5.jpg"
 import Site from "/projects/GenieLog/site.jpg"
@@ -112,7 +113,7 @@ const GenieLog = () => {
           </div>
 
           <div className="section-full-video">
-            <video src={Carte} autoPlay muted loop></video>
+            <VideoWithLoader src={Carte} />
           </div>
 
 

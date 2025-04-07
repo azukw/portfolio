@@ -32,57 +32,57 @@ const Preloader = ({ onComplete }) => {
     
     tl.to(".pl_col", {
       top: "0",
-      duration: 2,
+      duration: 1.5,
       ease: "power4.inOut"
     });
     
     tl.to(".pl_c-1 .pl_item", {
       top: "0",
-      stagger: 0.25,
-      duration: 2,
+      stagger: 0.2,
+      duration: 1.5,
       ease: "power4.inOut"
-    }, "-=1");
+    }, "-=0.75");
     
     tl.to(".pl_c-2 .pl_item", {
       top: "0",
-      stagger: -0.25,
-      duration: 2,
+      stagger: -0.2,
+      duration: 1.5,
       ease: "power4.inOut"
-    }, "-=3");
+    }, "-=2.25");
     
     tl.to(".pl_c-3 .pl_item", {
       top: "0",
-      stagger: 0.25,
-      duration: 2,
-      ease: "power4.inOut"
-    }, "-=4");
-    
-    tl.to(".pl_c-4 .pl_item", {
-      top: "0",
-      stagger: -0.25,
-      duration: 2,
-      ease: "power4.inOut"
-    }, "-=4");
-    
-    tl.to(".pl_c-5 .pl_item", {
-      top: "0",
-      stagger: 0.25,
-      duration: 2,
+      stagger: 0.2,
+      duration: 1.5,
       ease: "power4.inOut"
     }, "-=3");
     
+    tl.to(".pl_c-4 .pl_item", {
+      top: "0",
+      stagger: -0.2,
+      duration: 1.5,
+      ease: "power4.inOut"
+    }, "-=3");
+    
+    tl.to(".pl_c-5 .pl_item", {
+      top: "0",
+      stagger: 0.2,
+      duration: 1.5,
+      ease: "power4.inOut"
+    }, "-=2.25");
+    
     tl.to(".preloader-container", {
       scale: 6,
-      duration: 3,
+      duration: 2.2,
       ease: "power4.inOut"
-    }, "-=2");
+    }, "-=1.5");
     
     tl.to(".preloader-wrapper", {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "power2.inOut",
       pointerEvents: "none"
-    }, "-=1.5");  
+    }, "-=1.1");  
     
     return () => {
       tl.kill();

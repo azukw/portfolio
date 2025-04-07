@@ -8,6 +8,10 @@
   top: 0;
   left: 0;
   z-index: 9999;
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 body.preloader-active {
@@ -23,6 +27,9 @@ body.preloader-active {
   height: 100%;
   display: flex;
   gap: 1em;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .preloader-container .pl_col {
@@ -32,6 +39,9 @@ body.preloader-active {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .pl_col .pl_item {
@@ -40,6 +50,9 @@ body.preloader-active {
   width: 100%;
   background: #222;
   overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .pl_col .pl_item.empty-item {
@@ -50,16 +63,22 @@ body.preloader-active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .pl_c-1, .pl_c-3, .pl_c-5 {
   top: 100%;
+  will-change: transform;
 }
 
 .pl_c-1 .pl_item, .pl_c-3 .pl_item, .pl_c-5 .pl_item {
   top: 100%;
+  will-change: transform;
 }
 
 .pl_c-2 .pl_item, .pl_c-4 .pl_item {
   top: -100%;
+  will-change: transform;
 }
