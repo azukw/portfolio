@@ -257,8 +257,8 @@ const Menu = () => {
           <div className="menu-logo" onClick={closeMenu}>
             <Link to="/">
               <img 
-                src="/logo.png" 
-                alt="Logo" 
+                src="/logoP.png" 
+                alt="Logo Pixel" 
                 onMouseEnter={handleLogoHover}
                 onMouseLeave={handleLogoLeave}
               />
