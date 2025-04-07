@@ -11,6 +11,7 @@
   --filter-about: invert(0);
   --bg-menu: rgba(46, 46, 46, 0.281);
   --border: 1px dashed rgba(255, 255, 255, 0.25);
+  --bg-menu-hover: rgba(255, 255, 255, 0.2);
 }
 
 .light-mode {
@@ -24,6 +25,7 @@
   --filter-about: invert(1);
   --bg-menu: rgba(196, 196, 196, 0.281);
   --border: 1px dashed rgba(0, 0, 0, 0.25);
+  --bg-menu-hover: rgba(0, 0, 0, 0.2);
 }
 
 * {

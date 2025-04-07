@@ -10,7 +10,7 @@ const Menu = () => {
   const menuLinks = [
     { path: "/", label: "Accueil" },
     { path: "/works", label: "Projets" },
-    { path: "/about", label: "à Propos" },
+    { path: "/about", label: "contact" },
   ];
 
   const location = useLocation();
@@ -215,13 +215,53 @@ const Menu = () => {
     };
   }, []);
 
+  const getRandomTransform = () => {
+    const scale = 1 + Math.random() * 0.05;
+    const rotate = (Math.random() - 0.5) * 8;
+    const translateX = (Math.random() - 0.5) * 10;
+    const translateY = (Math.random() - 0.5) * 10;
+    return `scale(${scale}) rotate(${rotate}deg) translate(${translateX}px, ${translateY}px)`;
+  };
+
+  const getRandomColor = () => {
+    const hue = Math.random() * 360;
+    return `hsl(${hue}, 50%, 70%)`;
+  };
+
+  const handleLogoHover = (e) => {
+    const logo = e.currentTarget;
+    logo.style.transform = getRandomTransform();
+  };
+
+  const handleLogoLeave = (e) => {
+    const logo = e.currentTarget;
+    logo.style.transform = 'none';
+  };
+
+  const handleMenuLinkHover = (e) => {
+    const link = e.currentTarget;
+    link.style.transform = getRandomTransform();
+    link.style.color = getRandomColor();
+  };
+
+  const handleMenuLinkLeave = (e) => {
+    const link = e.currentTarget;
+    link.style.transform = 'none';
+    link.style.color = 'var(--fg)';
+  };
+
   return (
     <div className="menu-container" ref={menuContainer}>
       <div className="menu-bar" ref={menuBarRef}>
         <div className="menu-bar-container">
           <div className="menu-logo" onClick={closeMenu}>
             <Link to="/">
-              <img src="/logo.png" alt="Logo" />
+              <img 
+                src="/logo.png" 
+                alt="Logo" 
+                onMouseEnter={handleLogoHover}
+                onMouseLeave={handleLogoLeave}
+              />
             </Link>
           </div>
           <div className="menu-actions">
@@ -243,6 +283,8 @@ const Menu = () => {
                       className="menu-link"
                       to={link.path}
                       onClick={() => handleLinkClick(link.path)}
+                      onMouseEnter={handleMenuLinkHover}
+                      onMouseLeave={handleMenuLinkLeave}
                     >
                       {link.label}
                     </Link>
