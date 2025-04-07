@@ -18,7 +18,7 @@ const ThemeToggle = () => {
 
   return (
     <button className="nav-link theme-toggle" onClick={() => setIsLightMode(!isLightMode)}>
-      {isLightMode ? "🌙" : "☀️"}
+      {isLightMode ? <img src="/moon.svg" alt="Mode sombre" /> : <img src="/sun.svg" alt="Mode clair" />}
     </button>
   );
 };

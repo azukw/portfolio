@@ -22,6 +22,7 @@
 .contact-form input,
 .contact-form textarea {
   background-color: var(--bg200);
+  cursor: url("/cursors/beam.cur"), auto;
 }
 
 .contact-form .btn {
@@ -97,7 +98,7 @@
 
 .form-item .btn {
   width: 100%;
-  cursor: pointer;
+  cursor: url("/cursors/link.cur"), auto;
 }
 
 .confirmation-message {
