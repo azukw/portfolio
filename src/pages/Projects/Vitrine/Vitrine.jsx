@@ -12,6 +12,7 @@ import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader
 import Banner from "/work/work-4.jpg"
 import Code from "/projects/Vitrine/code.png"
 import Video from "/projects/Vitrine/site.mp4"
+import Github from "/github.png"
 
 const Vitrine = () => {
   return (
@@ -63,7 +64,7 @@ const Vitrine = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Site Web
+              Site Web <br /> Projet universitaire, en groupe
             </TexteAnime>
           </div>
 
@@ -72,10 +73,7 @@ const Vitrine = () => {
               Détails
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet universitaire, en groupe
+              <a href="https://github.com/azukw/donut-vitrine" target="_blank"><img src={Github} alt="Github" /></a>
             </TexteAnime>
           </div>
         </section>

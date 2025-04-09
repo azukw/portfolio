@@ -14,6 +14,7 @@ import Banner from "/work/work-2.jpg"
 import Preview from "/projects/Seeds/preview.mp4"
 import Colored from "/projects/Seeds/colored.jpg"
 import Black from "/projects/Seeds/black.jpg"
+import Github from "/github.png"
 
 
 const Seeds = () => {
@@ -66,19 +67,7 @@ const Seeds = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Modélisation 3D, Animation, Programmation
-            </TexteAnime>
-          </div>
-
-          <div className="details">
-            <TexteAnime tag="p" animateOnScroll={true} className="primary sm">
-              Détails
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-            <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet universitaire, solo
+              Modélisation 3D, Animation, Programmation <br /> Projet universitaire, solo
             </TexteAnime>
           </div>
         </section>

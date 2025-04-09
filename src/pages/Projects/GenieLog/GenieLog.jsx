@@ -13,6 +13,7 @@ import Banner from "/work/work-5.jpg"
 import Site from "/projects/GenieLog/site.jpg"
 import Diag from "/projects/GenieLog/diag.jpg"
 import Carte from "/projects/GenieLog/carte.mp4"
+import Github from "/github.png"
 
 
 const GenieLog = () => {
@@ -63,7 +64,7 @@ const GenieLog = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Application
+              Application <br /> Projet universitaire, en groupe
             </TexteAnime>
           </div>
 
@@ -72,10 +73,7 @@ const GenieLog = () => {
               Détails
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet universitaire, en groupe
+              <a href="https://github.com/azukw/genie-logiciel-projet" target="_blank"><img src={Github} alt="Github" /></a>
             </TexteAnime>
           </div>
         </section>

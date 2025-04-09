@@ -12,6 +12,7 @@ import VideoWithLoader from "../../../components/VideoWithLoader/VideoWithLoader
 import Banner from "/work/work-3.jpg"
 import Video1 from "/projects/Portfolio/exSite.mp4"
 import Video2 from "/projects/Portfolio/newSite.mp4"
+import Github from "/github.png"
 
 const Portfolio = () => {
   return (
@@ -67,7 +68,7 @@ const Portfolio = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Site Web
+              Site Web <br /> Projet personnel, solo
             </TexteAnime>
           </div>
 
@@ -76,10 +77,7 @@ const Portfolio = () => {
               Détails
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet personnel, solo
+              <a href="https://github.com/azukw/concept-site-presentation" target="_blank"><img src={Github} alt="Github" /></a>
             </TexteAnime>
           </div>
         </section>

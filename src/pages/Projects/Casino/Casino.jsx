@@ -13,6 +13,8 @@ import Banner from "/work/work-6.jpg"
 import Aim from "/projects/Casino/Aim.mp4"
 import Bingo from "/projects/Casino/Bingo.mp4"
 import Crash from "/projects/Casino/Crash.mp4"
+import WWW from "/projects/Casino/WWW.mp4"
+import Github from "/github.png"
 
 const Casino = () => {
   return (
@@ -62,7 +64,7 @@ const Casino = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Site Web, Jeu vidéo
+              Site Web, Jeu vidéo <br /> Projet de lycée, en groupe
             </TexteAnime>
           </div>
 
@@ -71,10 +73,7 @@ const Casino = () => {
               Détails
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet de lycée, en groupe
+              <a href="https://github.com/azukw/jeux-casino" target="_blank"><img src={Github} alt="Github" /></a>
             </TexteAnime>
           </div>
         </section>
@@ -104,6 +103,18 @@ const Casino = () => {
 
           <div className="section-full-video">
             <VideoWithLoader src={Bingo} />
+          </div>
+
+          <div className="section-half">
+            <div className="section-text">
+              <p>Le troisième est un jeu de hasard où il faut choisir soit la case à gauche, soit la case à droite, pour tenter d'augmenter le multiplicateur.
+                 Si on se trompe, on perd la mise. On peut changer cette mise à chaque partie, en l'augmentant ou la diminuant.
+                </p>
+            </div>
+          </div>
+
+          <div className="section-full-video">
+            <VideoWithLoader src={WWW} />
           </div>
 
           <div className="section-half">

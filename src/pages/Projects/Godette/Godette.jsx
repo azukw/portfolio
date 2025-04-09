@@ -79,7 +79,7 @@ const Godette = () => {
               Type
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
-              Jeu vidéo
+              Jeu vidéo <br /> Projet personnel, solo
             </TexteAnime>
           </div>
 
@@ -89,12 +89,6 @@ const Godette = () => {
             </TexteAnime>
             <TexteAnime tag="h4" animateOnScroll={true}>
             <a href="https://www.youtube.com/watch?v=AoGOIiBo4Eg&t=7453s" target="_blank"><h4>Source Vidéo</h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-            <a href="#"><h4><s>Github (Bientôt)</s></h4></a>
-            </TexteAnime>
-            <TexteAnime tag="h4" animateOnScroll={true}>
-              Projet personnel, solo
             </TexteAnime>
           </div>
         </section>
