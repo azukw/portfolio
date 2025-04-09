@@ -4,6 +4,15 @@
   <img src="/public/preview.png" alt="Portfolio" width="600" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
+## Table des Matières
+- [À Propos](#à-propos)  
+- [Technologies Utilisées](#technologies-utilisées)  
+- [Fonctionnalités](#fonctionnalités)  
+- [Installation](#installation)  
+- [Structure du Projet](#structure-du-projet)  
+- [Contact](#contact)  
+- [Détails](#détails)
+
 ## À Propos
 Ce portfolio est un site web interactif que j'ai fais avec React et Vite. Il présente mes projets, compétences et expériences !
 
