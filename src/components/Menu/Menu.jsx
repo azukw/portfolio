@@ -27,6 +27,7 @@ const Menu = () => {
   const [shouldDelayClose, setShouldDelayClose] = useState(false);
   const previousPathRef = useRef(location.pathname);
   const scrollPositionRef = useRef(0);
+  const [currentTime, setCurrentTime] = useState("");
 
   const toggleBodyScroll = (disableScroll) => {
     if (disableScroll) {
@@ -92,6 +93,7 @@ const Menu = () => {
 
   useEffect(() => {
     gsap.set(".menu-link-item-tient", { y: 125 });
+    gsap.set(".menu-social-icons", { opacity: 0, y: 20 });
 
     menuAnimation.current = gsap.timeline({ paused: true }).to(".menu", {
       duration: 1,
@@ -132,7 +134,15 @@ const Menu = () => {
         delay: 0.125,
         force3D: true,
         willChange: "transform"
-      });
+      })
+      .to(".menu-social-icons", {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        force3D: true,
+        willChange: "transform"
+      }, "-=0.3");
 
   const isPageReload = () => {
     if (window.performance) {
@@ -168,6 +178,7 @@ const Menu = () => {
       menuAnimation.current.reverse();
       menuBarAnimation.current.reverse();
       menuLinksAnimation.current.reverse();
+      gsap.set(".menu-social-icons", { opacity: 0, y: 20 });
     }
   }, [isMenuOpen]);
 
@@ -213,6 +224,24 @@ const Menu = () => {
         toggleBodyScroll(false);
       }
     };
+  }, []);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const days = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+      const day = days[now.getDay()];
+      const date = now.getDate().toString().padStart(2, '0');
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      setCurrentTime(`${day} ${date}, ${hours}:${minutes}:${seconds}`);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const getRandomTransform = () => {
@@ -264,6 +293,9 @@ const Menu = () => {
               />
             </Link>
           </div>
+          <div className="menu-clock">
+            {currentTime}
+          </div>
           <div className="menu-actions">
             <ThemeToggle/>
             <div className="menu-toggle">
@@ -293,6 +325,14 @@ const Menu = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="menu-social-icons">
+          <a href="https://github.com/azukw/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <img src="/github.png" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/sami-saoud-446836340/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <img src="/linkedin.png" alt="LinkedIn" />
+          </a>
         </div>
       </div>
     </div>
